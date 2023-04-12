@@ -41,13 +41,15 @@ const styles = StyleSheet.create({
   },
   contentWaiter: {
     borderRightWidth: 1,
-    borderRightColor: colors.secundary2,
+    borderRightColor: colors.primaryGreen,
     paddingHorizontal: 10,
   },
   contentButtons: {
     flexDirection: 'row',
     gap: 10,
     alignItems: 'center',
+    backgroundColor: colors.mediumseagreen,
+    borderRadius: 15,
   },
   buttonPress: {
     backgroundColor: colors.primaryGreen,
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
   },
   textPress: {
     fontFamily: fonts.montserrat.medium,
-    color: colors.primaryGreen,
+    color: colors.primaryTomato,
     textAlign: 'center',
   },
   button: {
@@ -70,7 +72,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: fonts.montserrat.medium,
-    color: colors.primaryGreen,
+    color: "#fff",
     textAlign: 'center',
   },
 })

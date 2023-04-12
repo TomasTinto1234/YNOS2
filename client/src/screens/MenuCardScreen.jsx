@@ -21,7 +21,6 @@ import MiniatureRestaurant from "../components/MiniatureRestaurant"
       <BackgroundCard logo={logo} />
       <ScrollView contentContainerStyle={styles.scroll}>
       <OptionsViewRestorant />
-    <MiniatureRestaurant/>
       </ScrollView>
       <View style={styles.btn}>
         <BigButtonOrder route='/order' />

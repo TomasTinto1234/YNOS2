@@ -21,8 +21,8 @@ import MiniatureRestaurant from "../components/MiniatureRestaurant"
     <ScrollView contentContainerStyle={styles.scroll}>
     <WelcomeUser/>
     <Search/>
-    <Categories/>
     <SpecialYnos/>
+    <Categories/>
     <NearMe/>
     <MiniatureRestaurant/>
       </ScrollView>

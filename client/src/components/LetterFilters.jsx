@@ -127,7 +127,7 @@ import {
     textButton: {
       textAlign: 'center',
       fontFamily: fonts.roboto.bold,
-      color: colors.primaryGreen,
+      color: "#fff",
       lineHeight: 16.41,
       fontSize: 15,
     },
@@ -138,14 +138,14 @@ import {
     button: {
       justifyContent: 'center',
       borderRadius: 8,
-      backgroundColor: colors.primaryGreen,
+      backgroundColor: colors.mediumseagreen,
       width: wp(30),
       height: hp(4),
     },
     buttonSelected: {
       width: wp(32),
       height: hp(4),
-      backgroundColor: colors.primaryGreen,
+      backgroundColor: colors.mediumseagreen,
       padding: 5,
       shadowColor: 'black',
       shadowOffset: { width: 0, height: 4 },
@@ -160,7 +160,7 @@ import {
       fontFamily: fonts.roboto.bold,
       fontSize: 15,
       lineHeight: 16.41,
-      color: colors.primaryGreen,
+      color: colors.primaryTomato,
     },
   
     menu_container: {

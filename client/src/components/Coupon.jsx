@@ -67,7 +67,7 @@ const Coupon = ({ viewCheck }) => {
           <View style={styles.couponInfo}>
             <Image
               style={styles.couponImage}
-              source={require('../../assets/descarga (1).jpeg')}
+              source={require('../../assets/descarga.png')}
             />
             <View style={styles.couponTexts}>
               <Text style={styles.couponSubtitle}>
@@ -87,7 +87,7 @@ const Coupon = ({ viewCheck }) => {
               checked={checkedOne.value}
               onPress={()=>addDiscount(10, checkedOne, setCheckedOne)}
               checkedColor={colors.primaryGreen}
-              size={26}
+              size={20}
             />
           )}
         </View>
@@ -116,7 +116,7 @@ const Coupon = ({ viewCheck }) => {
               checked={checkedTwo.value}
               onPress={() => addDiscount(50, checkedTwo, setCheckedTwo)}
               checkedColor={colors.primaryGreen}
-              size={26}
+              size={20}
             />
           )}
         </View>
@@ -160,7 +160,8 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   couponImage: {
-    width: wp('20%'),
+    width: wp('35%'),
+    height: hp('15%'),
   },
   couponTexts: {
     height: hp('10%'),
@@ -187,7 +188,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.montserrat.regular,
   },
   couponScroll: {
-    height: hp('82%'),
+    height: hp('32%'),
     paddingVertical: 10,
   },
   couponAdd: {
@@ -208,7 +209,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   couponModal:{
-    position: 'absolute',
+    // position: 'absolute',
     left: wp('15%'),
     top: hp('20%'),
     zIndex: 2,
