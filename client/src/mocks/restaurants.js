@@ -32,6 +32,23 @@ export default [
             price: 19.9,
             orderStatus: 'Entregado',
           },
+          {
+            id: '2-1',
+            name: 'Ceviche Mixto',
+            description: 'Un plato de pescado marinado',
+            imageDish: 'https://cdn7.kiwilimon.com/recetaimagen/26255/23270.jpg',
+            price: 25.9,
+            orderStatus: 'Entregado',
+          },
+          {
+            id: '2',
+            name: 'Leche de Tigre',
+            description: 'Otro plato muy delicioso',
+            imageDish:
+              'https://www.recetasderechupete.com/wp-content/uploads/2019/09/Leche-de-tigre.jpg',
+            price: 19.9,
+            orderStatus: 'Entregado',
+          },
           // {
           //   id: "1.3",
           //   name: "Ceviche Mixto",
@@ -79,6 +96,22 @@ export default [
             price: 32.5,
             orderStatus: 'Entregado',
           },
+          {
+            id: '4',
+            name: 'Ceviche Mixto',
+            description: 'Plato típico peruano a base de pescado y mariscos',
+            imageDish: 'https://i.imgur.com/UCIOzJh.jpg',
+            price: 27.0,
+            orderStatus: 'Entregado',
+          },
+          {
+            id: '5',
+            name: 'Ají de Gallina',
+            description: 'Pollo deshilachado en salsa de ají amarillo y leche',
+            imageDish: 'https://i.imgur.com/pqCwv20.jpg',
+            price: 20.0,
+            orderStatus: 'Entregado',
+          },
           // {
           //   id: '4',
           //   name: 'Ceviche Mixto',
@@ -113,6 +146,24 @@ export default [
             imageDrink:
               'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5uuq9UXdC9WCz_EaWEm3_xk3vSsJrB9BvYQ&usqp=CAU',
             price: 5.0,
+            orderStatus: 'Entregado',
+          },
+          {
+            id: '4',
+            name: 'Cerveza',
+            description: 'Cerveza artesanal hecha con ingredientes naturales',
+            imageDrink:
+            'https://images.hola.com/imagenes/cocina/noticiaslibros/2017091999436/oktoberfest-2017-consejos-cerveza/0-487-765/cerveza_tipos_z-z.jpg',
+            price: 8.0,
+            orderStatus: 'Entregado',
+          },
+          {
+            id: '3',
+            name: 'Agua Mineral',
+            description: 'Agua purificada sin gas',
+            imageDrink:
+              'https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040004_f.jpg',
+            price: 2.5,
             orderStatus: 'Entregado',
           },
         ],

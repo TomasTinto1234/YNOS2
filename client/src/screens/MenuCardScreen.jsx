@@ -1,4 +1,4 @@
-import { View, StyleSheet, SafeAreaView } from "react-native";
+import { View, StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import OptionsViewRestorant from "../components/OptionsViewRestorant";
 import {
   widthPercentageToDP as wp,
@@ -9,6 +9,7 @@ import BigButtonOrder from "../components/BigButtonOrder";
 import TitlePage from "../components/TitlePage";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-native";
+import MiniatureRestaurant from "../components/MiniatureRestaurant"
 
  const MenuCardScreen = () => {
   const { id } = useParams();
@@ -18,7 +19,10 @@ import { useParams } from "react-router-native";
     <SafeAreaView style={styles.container}>
         {/* <TitlePage text={'Hacer pedido'} white={false} route={'/'}/> */}
       <BackgroundCard logo={logo} />
+      <ScrollView contentContainerStyle={styles.scroll}>
       <OptionsViewRestorant />
+    <MiniatureRestaurant/>
+      </ScrollView>
       <View style={styles.btn}>
         <BigButtonOrder route='/order' />
       </View>
@@ -35,6 +39,10 @@ const styles = StyleSheet.create({
   btn: {
     position: "absolute",
     bottom: hp(5),
+  },
+  scroll: {
+    gap: 25,
+    alignItems: 'center'
   },
 });
 

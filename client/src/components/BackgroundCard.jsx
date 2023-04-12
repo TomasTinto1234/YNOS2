@@ -5,10 +5,10 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
-// import ViewOrderButton from './ViewOrderButton'
+import ViewOrderButton from './ViewOrderButton'
 // import HeartLogo from '../../assets/CorazonLogo.svg'
 import img from '../../assets/mcdonald.jpg'
-// import InviteBtn from './InviteBtn'
+import InviteBtn from './InviteBtn'
 
 const BackgroundCard = ({ logo }) => {
   return (
@@ -28,8 +28,8 @@ const BackgroundCard = ({ logo }) => {
           {/* <HeartLogo style={{ marginVertical: 10 }} /> */}
         </View>
         <View style={styles.backgroundCard_button}>
-          {/* <InviteBtn /> */}
-          {/* <ViewOrderButton /> */}
+          <InviteBtn />
+          <ViewOrderButton />
         </View>
       </View>
     </SafeAreaView>

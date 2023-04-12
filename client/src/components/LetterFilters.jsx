@@ -22,7 +22,7 @@ import {
     const { restaurants } = useSelector((state) => state.restaurantState)
     const { preOrder } = useSelector((state) => state.orderState)
   
-    const [select, setSelect] = useState('Menu')
+    const [select, setSelect] = useState('Entradas')
     //No borrar lo que esta comentado: razon: porque se necesita para un futuro
     // const { id } = useParams()
     // const filterRestaurant = restaurants.filter(
@@ -62,7 +62,7 @@ import {
         </View>
         <View style={style.cardBox}>
           <ScrollView>
-            {select === 'Menu' &&
+            {select === 'Entradas' &&
               restaurants[0]?.menu?.Entradas?.map((entrada, index) => (
                 <View key={index}>
                   <FoodCard
