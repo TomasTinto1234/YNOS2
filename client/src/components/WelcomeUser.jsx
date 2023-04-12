@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    color: colors.secundary4,
+    color: colors.primaryTomato,
     fontFamily: fonts.montserrat.medium,
     fontSize: 20,
   },

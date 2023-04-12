@@ -22,7 +22,7 @@ const ViewOrderButton = () => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.primaryGreen,
+    backgroundColor: colors.mediumseagreen,
     width: wp('38.00%'),
     height: hp('4.00%'),
     borderRadius: 7,
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   textButton: {
     textAlign: 'center',
     fontSize: 17,
-    color: '#FFFFFF',
+    color: colors.secundary3,
     fontFamily: fonts.montserrat.medium,
   },
 })

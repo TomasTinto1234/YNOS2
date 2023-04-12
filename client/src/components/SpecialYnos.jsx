@@ -24,7 +24,7 @@ const SpecialYnos = () => {
   const data = [
     {
       name: 'Image 1',
-      uri: require('../../assets/descarga.png')
+      uri: require('../../assets/descarga3.png')
     },
     {
       name: 'Image 2',
@@ -32,7 +32,7 @@ const SpecialYnos = () => {
     },
     {
       name: 'Image 3',
-      uri: require('../../assets/png-transparent-fast-food.png')
+      uri: require('../../assets/descarga.png')
     }
   ];
   const handleButtonPress = (index) => {

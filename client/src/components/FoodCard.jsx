@@ -60,13 +60,13 @@ import {
             </Text>
             <View style={styles.viewSvgs}>
               <TouchableOpacity onPress={() => quantityCalculate('-')}>
-                {/* <MinusButton style={styles.svgs} /> */}
+                {/* <MinusButton style={styles.svgs} /> */}<Text style={styles.more}>-</Text>
               </TouchableOpacity>
               <Text style={styles.priceAndQuantity}>
                 {quantity}
               </Text>
               <TouchableOpacity onPress={() => quantityCalculate('+')}>
-                {/* <MoreButton style={styles.svgs} /> */}
+                {/* <MoreButton style={styles.svgs} /> */}<Text style={styles.more}>+</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -146,6 +146,11 @@ import {
       justifyContent: 'space-around',
       alignContent: 'center',
     },
+
+    more:{
+      fontSize:35,
+      color: colors.primaryTomato
+    }
   })
   
   export default FoodCard

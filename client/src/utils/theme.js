@@ -1,5 +1,5 @@
 export const colors = {
-    mediumseagreen : '#3cb371',
+    mediumseagreen : '#008b8b', //3cb371
     primaryTomato: '#ff6347',
     secundary1: '#00000005', // gris medio
     secundary2: '#313232', // gris oscuro

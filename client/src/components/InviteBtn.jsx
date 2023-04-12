@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { View, TouchableOpacity, StyleSheet, Image, Text } from "react-native";
 import React, { useState } from "react";
 import { colors } from "../utils/theme";
 // import Add from "../../assets/add.svg";
@@ -25,7 +25,7 @@ const InviteBtn = () => {
         source={require("../../assets/profilePictureTemp.png")}
       />
       <TouchableOpacity style={styles.inviteBtnAdd} onPress={addPeoples}>
-        {/* <Add /> */}
+        {/* <Add /> */}<Text style={styles.invite}>+</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => setDisplayGuests(true)}>
         {/* <ThreePointOptions /> */}
@@ -56,6 +56,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     left: -20,
+  },
+  invite:{
+fontSize:40,
+color: colors.primaryTomato
   },
 });
 

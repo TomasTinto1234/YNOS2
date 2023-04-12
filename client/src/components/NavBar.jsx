@@ -14,6 +14,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import { colors } from '../utils/theme';
 const Navbar = () => {
   const [activeButton, setActiveButton] = useState('home')
   const navigation = useNavigate()
@@ -33,12 +34,12 @@ const Navbar = () => {
             styles.navbar_button,
             {
               bottom: activeButton === 'home' ? 30 : 0,
-              backgroundColor: activeButton === 'home' ? '#87BE56' : '#fff',
+              backgroundColor: activeButton === 'home' ? '#3cb371' : colors.secundary3,
             },
           ]}
         >
           {/* <HomeLogo stroke={activeButton === 'home' ? '#fff' : '#000'} /> */}
-          <Text style={{ color: activeButton === 'home' ? '#fff' : '#000' }}>
+          <Text style={{ color: activeButton === 'home' ? colors.secundary3 : '#000' }}>
             Home
           </Text>
         </View>
@@ -58,12 +59,12 @@ const Navbar = () => {
             styles.navbar_button,
             {
               bottom: activeButton === 'qr' ? 25 : 0,
-              backgroundColor: activeButton === 'qr' ? '#87BE56' : '#fff',
+              backgroundColor: activeButton === 'qr' ? '#3cb371' : colors.secundary3,
             },
           ]}
         >
           {/* <QrLogo fill={activeButton === 'qr' ? '#fff' : '#000'} /> */}
-          <Text style={{ color: activeButton === 'qr' ? '#fff' : '#000' }}>
+          <Text style={{ color: activeButton === 'qr' ? colors.secundary3 : '#000' }}>
             QR
           </Text>
         </View>
@@ -81,12 +82,12 @@ const Navbar = () => {
             styles.navbar_button,
             {
               bottom: activeButton === 'perfil' ? 30 : 0,
-              backgroundColor: activeButton === 'perfil' ? '#87BE56' : '#fff',
+              backgroundColor: activeButton === 'perfil' ? '#3cb371' : colors.secundary3,
             },
           ]}
         >
           {/* <PerfilLogo stroke={activeButton === 'perfil' ? '#fff' : 'black'} /> */}
-          <Text style={{ color: activeButton === 'perfil' ? '#fff' : '#000' }}>
+          <Text style={{ color: activeButton === 'perfil' ? colors.secundary3 : '#000' }}>
             Perfil
           </Text>
         </View>
@@ -99,7 +100,7 @@ export default Navbar
 
 const styles = StyleSheet.create({
   navbar_container: {
-    backgroundColor: 'white',
+    backgroundColor: colors.secundary4,
     borderTopStartRadius: 80,
     borderTopEndRadius: 80,
     height: 90,
@@ -124,7 +125,6 @@ const styles = StyleSheet.create({
   },
   navbar_button: {
     width: 90,
-    backgroundColor: 'red',
     height: 90,
     marginVertical: -40,
     transitionDuration: '0.6s',

@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   textPress: {
     fontFamily: fonts.montserrat.medium,
-    color: colors.primaryTomato,
+    color: colors.secundary3,
     textAlign: 'center',
   },
   button: {

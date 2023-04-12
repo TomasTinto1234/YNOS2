@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     height: hp('5%'),
   },
   text: {
-    color: '#fff',
+    color: colors.secundary3,
     fontSize: 17,
     fontWeight: 'bold',
     textAlign: 'center',

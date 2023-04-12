@@ -160,7 +160,7 @@ import {
       fontFamily: fonts.roboto.bold,
       fontSize: 15,
       lineHeight: 16.41,
-      color: colors.primaryTomato,
+      color: colors.secundary3,
     },
   
     menu_container: {
