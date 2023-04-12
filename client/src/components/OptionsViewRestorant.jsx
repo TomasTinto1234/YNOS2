@@ -2,7 +2,8 @@ import { StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import OffersCardButtons from "./OffersCardButtons";
 import OffersYnos from "./OffersYnos";
-import LetterFilters from "./LetterFilters";
+  import { fonts, colors } from '../utils/theme'
+  import LetterFilters from "./LetterFilters";
 
 const OptionsViewRestorant = () => {
   // el estado almacena el componente que se debe mostrar segun el boton presionado
@@ -47,7 +48,7 @@ const OptionsViewRestorant = () => {
 const styles = StyleSheet.create({
   containerInterno: {
     paddingBottom: 4,
-    backgroundColor: "white",
+    backgroundColor: colors.primaryGreen,
   },
 });
 

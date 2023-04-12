@@ -19,7 +19,7 @@ const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
           action={viewLetter}
         />
         <ButtonReutil
-          text={'Ofertas Half'}
+          text={'Ofertas Ynos'}
           colorBtn={statusBtn === 'offer' ? styles.buttonPress : styles.button}
           styleText={statusBtn === 'offer' ? styles.textPress : styles.text}
           action={viewOffer}
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   buttonPress: {
     backgroundColor: colors.primaryGreen,
-    paddingHorizontal: 10,
+    paddingHorizontal: 1,
     paddingVertical: 4,
     borderRadius: 6,
     width: wp('30%'),
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   button: {
-    backgroundColor: colors.secundary6,
+    backgroundColor: colors.primaryGreen,
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 6,

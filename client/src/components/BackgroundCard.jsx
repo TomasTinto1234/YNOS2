@@ -7,7 +7,7 @@ import {
 } from 'react-native-responsive-screen'
 // import ViewOrderButton from './ViewOrderButton'
 // import HeartLogo from '../../assets/CorazonLogo.svg'
-import img from '../../assets/descarga.png'
+import img from '../../assets/mcdonald.jpg'
 // import InviteBtn from './InviteBtn'
 
 const BackgroundCard = ({ logo }) => {
@@ -24,7 +24,7 @@ const BackgroundCard = ({ logo }) => {
         />
         <View style={styles.background_text}>
           <Text style={styles.text}>N° de Mesa: 10</Text>
-          <Text style={styles.text}>N° de Comensales:{' 1 '}</Text>
+          <Text style={styles.text}>N° de Comensales:{' 10 '}</Text>
           {/* <HeartLogo style={{ marginVertical: 10 }} /> */}
         </View>
         <View style={styles.backgroundCard_button}>

@@ -12,6 +12,7 @@ import SpecialYnos from "../components/SpecialYnos";
 import Categories from "../components/Categories";
 import NearMe from "../components/NearMe";
 import Navbar from "../components/NavBar";
+import MiniatureRestaurant from "../components/MiniatureRestaurant"
 
  const MainMenuScreen = () => {
   return (
@@ -21,8 +22,9 @@ import Navbar from "../components/NavBar";
     <WelcomeUser/>
     <Search/>
     <Categories/>
-    <NearMe/>
     <SpecialYnos/>
+    <NearMe/>
+    <MiniatureRestaurant/>
       </ScrollView>
       <Navbar/>
     </View>

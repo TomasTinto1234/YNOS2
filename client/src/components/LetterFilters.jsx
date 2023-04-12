@@ -22,7 +22,7 @@ import {
     const { restaurants } = useSelector((state) => state.restaurantState)
     const { preOrder } = useSelector((state) => state.orderState)
   
-    const [select, setSelect] = useState('Entradas')
+    const [select, setSelect] = useState('Menu')
     //No borrar lo que esta comentado: razon: porque se necesita para un futuro
     // const { id } = useParams()
     // const filterRestaurant = restaurants.filter(
@@ -62,7 +62,7 @@ import {
         </View>
         <View style={style.cardBox}>
           <ScrollView>
-            {select === 'Entradas' &&
+            {select === 'Menu' &&
               restaurants[0]?.menu?.Entradas?.map((entrada, index) => (
                 <View key={index}>
                   <FoodCard
@@ -114,7 +114,7 @@ import {
       maxHeight: hp('100'),
       paddingHorizontal: 5,
       paddingVertical: -10,
-      backgroundColor: 'white',
+      backgroundColor: colors.primaryGreen,
     },
     containerView: {
       flexDirection: 'row',
@@ -122,6 +122,7 @@ import {
       marginVertical: 2,
       gap: 13,
       paddingVertical: 3,
+      backgroundColor: colors.primaryGreen,
     },
     textButton: {
       textAlign: 'center',
@@ -131,13 +132,13 @@ import {
       fontSize: 15,
     },
     cardBox: {
-      height: hp(40),
+      height: hp(60),
       marginTop: 5
     },
     button: {
       justifyContent: 'center',
       borderRadius: 8,
-      backgroundColor: colors.secundary6,
+      backgroundColor: colors.primaryGreen,
       width: wp(30),
       height: hp(4),
     },
@@ -159,7 +160,7 @@ import {
       fontFamily: fonts.roboto.bold,
       fontSize: 15,
       lineHeight: 16.41,
-      color: colors.secundary6,
+      color: colors.primaryGreen,
     },
   
     menu_container: {
