@@ -23,7 +23,7 @@ const PayScreen = () => {
         </ScrollView>
       </View>
       <View style={styles.btn}>
-        <BigButtonPay text='Pagar' route='/addpaymethod' />
+        <BigButtonPay text='Pagar' route='/' />
       </View>
     </View>
   )

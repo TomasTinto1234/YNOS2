@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "YNOS",
-    "slug": "YNOS",
+    "slug": "ynos",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/DALL·E.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/DALL·E.png",
         "backgroundColor": "#008b8b"
-      }
+      },
+      "package": "com.tomastinto.ynos"
     },
     "web": {
       "favicon": "./assets/DALL·E.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0f51fa4c-54b8-47eb-a5a5-c1b926685dcc"
+      }
+    },
+    "owner": "tomastinto"
   }
 }
