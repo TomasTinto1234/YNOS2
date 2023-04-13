@@ -6,7 +6,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
-// import SocialMedias from '../components/SocialMedias'
+import SocialMedias from '../components/SocialMedia'
 // import Contacts from '../components/Contacts'
 // import SendInviteModal from '../components/SendInviteModal'
 import { colors, fonts } from '../utils/theme'
@@ -28,7 +28,7 @@ const InviteFriendsScreen = () => {
     <View style={styles.container}>
       <TitlePage text={'Invita amigos a tu mesa'} white={true} route={'/menucard/0'} />
       {/* <SearchFriends /> */}
-      {/* <SocialMedias /> */}
+      <SocialMedias />
       {/* <Contacts guests={guests} setGuests={setGuests} modalVisible={modalVisible} setModalVisible={setModalVisible} /> */}
       {/* Boton para enviar invitacion */}
       <TouchableOpacity style={styles.button} onPress={handlePress} disabled={guests.length < 1} >

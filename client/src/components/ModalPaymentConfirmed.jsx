@@ -53,6 +53,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: colors.secundary3,
+    shadowColor: '#008b8b',
+    shadowOffset: {
+      width: 4,
+      height: 5,
+    },
+    shadowOpacity: 1,
+    // shadowRadius: 5.84,
+    elevation: 7,
   },
 
   // modal

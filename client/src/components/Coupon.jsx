@@ -120,16 +120,16 @@ const Coupon = ({ viewCheck }) => {
             />
           )}
         </View>
-      </ScrollView>
-      
-      <View style={styles.couponModal}>
-        {viewModal && viewModal}
-      </View>
 
       <View style={styles.couponAdd}>
         <TouchableOpacity style={styles.couponButton} >
             <Text style={styles.couponTextBtn}>Agregar cupón</Text>
         </TouchableOpacity>
+      </View>
+      </ScrollView>
+      
+      <View style={styles.couponModal}>
+        {viewModal && viewModal}
       </View>
     </View>
   );
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   couponButton: {
-    backgroundColor: colors.primaryGreen,
+    backgroundColor: colors.mediumseagreen,
     paddingHorizontal: 10,
     paddingVertical: 14,
     borderRadius: 10,

@@ -19,9 +19,7 @@ import MiniatureRestaurant from "../components/MiniatureRestaurant"
     <SafeAreaView style={styles.container}>
         {/* <TitlePage text={'Hacer pedido'} white={false} route={'/'}/> */}
       <BackgroundCard logo={logo} />
-      <ScrollView contentContainerStyle={styles.scroll}>
       <OptionsViewRestorant />
-      </ScrollView>
       <View style={styles.btn}>
         <BigButtonOrder route='/order' />
       </View>

@@ -41,7 +41,7 @@ const OrderList = ({ screen, dish }) => {
       {screen === 'payScreen' && (
         <View style={styles.payContainer}>
           <Text style={styles.text}>{dish.name}</Text>
-          <Text style={styles.price}>S/.{dish.price.toFixed(2) || '0.00'}</Text>
+          <Text style={styles.price}>$/{dish.price.toFixed(2) || '0.00'}</Text>
         </View>
       )}
     </View>
