@@ -29,9 +29,9 @@ export default function ScanQRComponent() {
     return (
       <View>
         <Text>Permisos a la camara</Text>
-        <Button title="Volver Inicio" onPress={() => navigate('/')}>
+        {/* <Button title="Volver Inicio" onPress={() => navigate('/')}>
           Inicio
-        </Button>
+        </Button> */}
       </View>
     );
   }

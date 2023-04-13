@@ -1,9 +1,14 @@
 import { useState } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
 // import TrashIcon from '../../assets/trash.svg'
 import { colors, fonts } from '../utils/theme'
 import { removeOrder } from '../redux/slices/order/orderSlice'
 import { useDispatch } from 'react-redux'
+import Tacho from "../../assets/tacho.png"
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen'
 
 const OrderList = ({ screen, dish }) => {
   const dispatch = useDispatch()
@@ -21,12 +26,12 @@ const OrderList = ({ screen, dish }) => {
           <View style={styles.spaceText}>
             <View>
               <Text style={styles.text}>{dish.name}</Text>
-              <Text style={styles.price}>{`$/${dish.price.toFixed(2)}`}</Text>
+              <Text style={styles.price}>{`$ ${dish.price.toFixed(2)}`}</Text>
             </View>
             <View style={styles.quantIcon}>
               <Text style={styles.quantity}>{dish.quantity}</Text>
               <TouchableOpacity onPress={() => deleteDish(dish.id)}>
-                {/* <TrashIcon /> */}<Text style={styles.x}>X</Text>
+                <Image style={styles.backgroundImage1} source={Tacho} />
               </TouchableOpacity>
             </View>
           </View>
@@ -40,8 +45,8 @@ const OrderList = ({ screen, dish }) => {
       )}
       {screen === 'payScreen' && (
         <View style={styles.payContainer}>
-          <Text style={styles.text}>{dish.name}</Text>
-          <Text style={styles.price}>$/{dish.price.toFixed(2) || '0.00'}</Text>
+          <Text style={styles.text}> {dish.name} </Text>
+          <Text style={styles.price}>$ {dish.price.toFixed(2) || '0.00'}</Text>
         </View>
       )}
     </View>
@@ -101,6 +106,13 @@ const styles = StyleSheet.create({
    fontSize:20,
    alignItems: "center"
   },
+  backgroundImage1:{
+    width: wp(5),
+    height: hp(3),
+    // resizeMode: 'cover',
+    // opacity: 0.56,
+    // backgroundColor: colors.mediumseagreen,
+  }
 })
 
 export default OrderList

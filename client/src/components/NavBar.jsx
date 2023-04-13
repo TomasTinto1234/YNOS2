@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   StyleSheet,
   TouchableHighlight,
+  Image
 } from 'react-native'
 // import PerfilLogo from '../../assets/whitePerson.svg'
 // import HomeLogo from '../../assets/Home-logo.svg'
@@ -15,6 +16,11 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import { colors } from '../utils/theme';
+import Home from '../../assets/casa.png'
+import Qr from '../../assets/qrsvg.png'
+import Perfil from "../../assets/pe.png"
+
+
 const Navbar = () => {
   const [activeButton, setActiveButton] = useState('home')
   const navigation = useNavigate()
@@ -38,7 +44,7 @@ const Navbar = () => {
             },
           ]}
         >
-          {/* <HomeLogo stroke={activeButton === 'home' ? '#fff' : '#000'} /> */}
+          <Image style={styles.backgroundImage} source={Home} />
           <Text style={{ color: activeButton === 'home' ? colors.secundary3 : '#000' }}>
             Home
           </Text>
@@ -63,7 +69,7 @@ const Navbar = () => {
             },
           ]}
         >
-          {/* <QrLogo fill={activeButton === 'qr' ? '#fff' : '#000'} /> */}
+          <Image style={styles.backgroundImage} source={Qr} />
           <Text style={{ color: activeButton === 'qr' ? colors.secundary3 : '#000' }}>
             QR
           </Text>
@@ -86,7 +92,7 @@ const Navbar = () => {
             },
           ]}
         >
-          {/* <PerfilLogo stroke={activeButton === 'perfil' ? '#fff' : 'black'} /> */}
+          <Image style={styles.backgroundImage} source={Perfil} />
           <Text style={{ color: activeButton === 'perfil' ? colors.secundary3 : '#000' }}>
             Perfil
           </Text>
@@ -132,5 +138,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 50,
+  },
+  backgroundImage: {
+    width: wp(14),
+    height: hp(7),
+    // marginTop:10,
+    // resizeMode: 'cover',
+    // opacity: 0.56,
+    // backgroundColor: colors.mediumseagreen,
   },
 })

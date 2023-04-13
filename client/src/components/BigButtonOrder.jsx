@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, Image } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { colors, fonts } from '../utils/theme'
 
@@ -9,11 +9,11 @@ import {
 import { useSelector } from 'react-redux'
 
 const BigButtonOrder = ({ route }) => {
-//   const { preOrder } = useSelector((state) => state.orderState)
+  const { preOrder } = useSelector((state) => state.orderState)
 
-//   const totalPrice = preOrder.reduce((acc, cur) => {
-//     return acc + cur.price * cur.quantity
-//   }, 0)
+  const totalPrice = preOrder.reduce((acc, cur) => {
+    return acc + cur.price * cur.quantity
+  }, 0)
 
   const navigate = useNavigate()
   const handlePress = () => {
@@ -22,9 +22,8 @@ const BigButtonOrder = ({ route }) => {
 
   return (
     <TouchableOpacity style={styles.button} onPress={handlePress}>
-      {/* <ShoppingBag style={styles.bag} /> */}
       <Text style={styles.text}>Ordenar</Text>
-      {/* <Text style={styles.text}>{`S/.${totalPrice.toFixed(2)}`}</Text> */}
+      <Text style={styles.text}>{`$ ${totalPrice.toFixed(2)}`}</Text>
     </TouchableOpacity>
   )
 }
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
     height: wp('12%'),
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
   },
   bag: {
     width: wp('7.5%'),

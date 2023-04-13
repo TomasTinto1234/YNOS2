@@ -19,6 +19,8 @@ import {
     decreaseOrderQuantity,
   } from '../redux/slices/order/orderSlice'
   import { useDispatch, useSelector } from 'react-redux'
+  import Mas from "../../assets/mass.webp"
+  import Menos from "../../assets/menoss.png"
   
   const FoodCard = ({ name, description, image, price, id, quantity }) => {
     const dispatch = useDispatch()
@@ -56,17 +58,17 @@ import {
           </Text>
           <View style={styles.viewOrder}>
             <Text style={styles.priceAndQuantity}>
-              $.{price.toFixed(2) || '0.00'}
+              ${price || '0.00'}
             </Text>
             <View style={styles.viewSvgs}>
               <TouchableOpacity onPress={() => quantityCalculate('-')}>
-                {/* <MinusButton style={styles.svgs} /> */}<Text style={styles.more}>-</Text>
+              <Image style={styles.backgroundImage1} source={Menos} />
               </TouchableOpacity>
               <Text style={styles.priceAndQuantity}>
                 {quantity}
               </Text>
               <TouchableOpacity onPress={() => quantityCalculate('+')}>
-                {/* <MoreButton style={styles.svgs} /> */}<Text style={styles.more}>+</Text>
+              <Image style={styles.backgroundImage} source={Mas} />
               </TouchableOpacity>
             </View>
           </View>
@@ -77,7 +79,7 @@ import {
   
   export const styles = StyleSheet.create({
     containerFoodCard: {
-      marginVertical: 4,
+      marginVertical: 6,
       borderColor: 'lightgray',
       borderWidth: 2,
       borderRadius: 12,
@@ -94,11 +96,11 @@ import {
       borderRadius: 8,
     },
     image: {
-      borderColor: '#fff',
+      borderColor: 'lightgray',
       borderWidth: 1,
       borderRadius: 15,
-      width: 82,
-      height: 82,
+      width: 70,
+      height: 75,
       resizeMode: 'cover',
     },
     viewText: {
@@ -115,7 +117,7 @@ import {
     description: {
       fontSize: 12,
       fontFamily: fonts.montserrat.medium,
-      color: colors.secundary7,
+      color: colors.secundary8,
     },
     viewOrder: {
       paddingEnd: 18,
@@ -151,6 +153,15 @@ import {
       fontSize:35,
       color: colors.primaryTomato
     },
+    backgroundImage: {
+      width: wp(11),
+      height: hp(5),
+    },
+    backgroundImage1:{
+      width: wp(7),
+      height: hp(3),
+      marginTop:8,
+    }
   })
   
   export default FoodCard

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import { useNavigate } from "react-router-native";
 import { colors, fonts } from "../utils/theme";
 import {
@@ -10,6 +10,7 @@ import {
 //   SolidIcons,
 //   RegularIcons,
 // } from "react-native-fontaweasome";
+import flecha from '../../assets/flechaizquierda.png'
 
 const TitlePage = ({ text, route, white }) => {
   const navigate = useNavigate();
@@ -20,13 +21,15 @@ const TitlePage = ({ text, route, white }) => {
   return (
     <View style={white ? styles.whiteContainer : styles.container}>
       <View style={styles.box}>
-        <TouchableOpacity>
+        <TouchableOpacity  onPress={handlePress}>
           {white ? (
             <View style={styles.backContainer}>
+              <Image style={styles.backgroundImageWhite} source={flecha} />
               {/* <FontAwesome icon={SolidIcons.FaArrow} /> */}
             </View>
           ) : (
             <View style={styles.backContainer}>
+               <Image style={styles.backgroundImage} source={flecha} />
               {/* <FontAwesome icon={SolidIcons.FaArrow} /> */}
             </View>
           )}
@@ -93,5 +96,23 @@ const styles = StyleSheet.create({
     height: 20,
     width: 20,
     alignSelf: "center",
+  },
+  backgroundImage: {
+    width: wp(10),
+    height: hp(5),
+    left:10,
+    // marginTop:10,
+    // resizeMode: 'cover',
+    // opacity: 0.56,
+    backgroundColor: colors.mediumseagreen,
+  },
+  backgroundImageWhite:{
+    width: wp(10),
+    height: hp(5),
+    left:10,
+    // marginTop:10,
+    // resizeMode: 'cover',
+    // opacity: 0.56,
+    backgroundColor: "#fff",
   },
 });

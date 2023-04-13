@@ -6,7 +6,7 @@ import {
 import TitlePage from '../components/TitlePage'
 import YourProductList from '../components/YourProductList'
 import BigButtonPay from '../components/BigButtonPay'
-// import TotalCost from '../components/TotalCost'
+import TotalCost from '../components/TotalCost'
 
 const OrderScreen = () => {
   return (
@@ -15,7 +15,7 @@ const OrderScreen = () => {
         <ScrollView contentContainerStyle={styles.scrollView}>
           <TitlePage text={'Ordernar'} route={'/menucard/0'} />
           <YourProductList screen={'orderScreen'} />
-          {/* <TotalCost order /> */}
+          <TotalCost order />
         </ScrollView>
       </View>
       <View style={styles.btn}>

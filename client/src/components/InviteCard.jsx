@@ -26,7 +26,7 @@ const InviteCard = ({ id, name, img, guests, setGuests }) => {
                 iconType="material-community"
                 checkedIcon="checkbox-marked"
                 uncheckedIcon="checkbox-blank-outline"
-                checkedColor={colors.primaryGreen}
+                checkedColor={colors.mediumseagreen}
             />
         </View>
     );

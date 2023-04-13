@@ -7,7 +7,7 @@ import {
 import TitlePage from "../components/TitlePage";
 import YourProductList from "../components/YourProductList";
 import BigButtonPay from "../components/BigButtonPay";
-// import TotalCost from '../components/TotalCost'
+import TotalCost from '../components/TotalCost'
 // import OrdersFromOthersMembers from '../components/OrdersFromOthersMembers'
 // import TypesOfPayments from '../components/TypesOfPayments'
 import ModalPaymentConfirmed from "../components/ModalPaymentConfirmed";
@@ -38,7 +38,7 @@ const PayScreen = () => {
           <YourProductList screen={"payScreen"} />
           {/* <OrdersFromOthersMembers /> */}
           {/* <TypesOfPayments /> */}
-          {/* <TotalCost sliceState={'totalPrice'} /> */}
+          <TotalCost sliceState={'totalPrice'} order/>
         </ScrollView>
       </View>
       <ModalPaymentConfirmed

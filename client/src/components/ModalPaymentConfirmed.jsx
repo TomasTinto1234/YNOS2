@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Modal, Pressable } from 'react-native'
+import { StyleSheet, View, Text, Modal, Pressable, Image } from 'react-native'
 import { fonts, colors } from '../utils/theme'
 import {
   widthPercentageToDP as wp,
@@ -6,6 +6,7 @@ import {
 } from 'react-native-responsive-screen'
 // import Confeti from '../../assets/confeti'
 import { useNavigate } from 'react-router-native'
+import Succes from "../../assets/success-38.png"
 
 const ModalPaymentConfirmed = ({ paymentCode, modalVisible, setModalVisible, numeros }) => {
 
@@ -29,7 +30,7 @@ const ModalPaymentConfirmed = ({ paymentCode, modalVisible, setModalVisible, num
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             {/* <Confeti style={styles.iconModal} /> */}
-
+            <Image style={styles.backgroundImage1} source={Succes} />
             <Text style={styles.modalText}>Pago Confirmado</Text>
             <Text style={styles.modalText2}>Código de pago:</Text>
             <Text style={styles.modalText3}>#{numeros}</Text>
@@ -136,6 +137,11 @@ const styles = StyleSheet.create({
     width: wp('50.00%'),
     height: hp('20.00%'),
   },
+  backgroundImage1:{
+    width: wp(20),
+    height: hp(10),
+    marginTop:8,
+  }
 })
 
 export default ModalPaymentConfirmed

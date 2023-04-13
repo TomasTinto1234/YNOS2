@@ -7,7 +7,7 @@ import {
     StyleSheet,
   } from 'react-native'
   import React, { useState, useEffect } from 'react'
-  import QrImage from '../../assets/qrmenu.jpg'
+  import QrImage from '../../assets/qrsvg.png'
   import { useNavigate } from 'react-router-native'
   import ScanQRComponent from '../components/ScanQRComponent.jsx'
   import {
@@ -23,7 +23,7 @@ import {
     useEffect(() => {
       Alert.alert(
         'Debes activar tu cámara',
-        '¿Das permisos para activar la cámara?',
+        '¿activar la cámara?',
         [
           { text: 'Si', onPress: () => setHasPermission(true) },
           { text: 'No', onPress: () => navigate('/'), style: 'cancel' },
@@ -56,7 +56,8 @@ import {
       height: hp('100.00%'),
     },
     image: {
-      width: wp('100.00%'),
+      width: wp('97.00%'),
+      height: hp('65.00%')
     },
   
     container_scanQr: {

@@ -8,11 +8,17 @@ import { useSelector } from 'react-redux'
 import { colors, fonts } from '../utils/theme'
 
 const TotalCost = ({ sliceState, order = false }) => {
-  const totalPrice = useSelector(
-    (state) => state.orderState[sliceState || 'totalPrice']
-  )
+  // const totalPrice = useSelector(
+  //   (state) => state.orderState[sliceState || 'totalPrice']
+  // )
+  const { preOrder } = useSelector((state) => state.orderState)
+
+  const totalPrice = preOrder.reduce((acc, cur) => {
+    return acc + cur.price * cur.quantity
+  }, 0)
   const { preOrderPrice } = useSelector((state) => state.orderState)
   const precioTotal = totalPrice == 0 ? '0.00' : totalPrice.toFixed(2)
+
 
   return (
     <View>
@@ -22,15 +28,15 @@ const TotalCost = ({ sliceState, order = false }) => {
             <Text style={styles.title}>Costo total</Text>
             {order && (
               <Text style={[styles.title, styles.titleTwo]}>
-                (Este monto aún no será cobrado)
+                {/* (Este monto aún no será cobrado) */}
               </Text>
             )}
           </View>
           <View style={styles.line}></View>
           {order ? (
-            <Text style={styles.price}>S/.{preOrderPrice.toFixed(2)}</Text>
+            <Text style={styles.price}>$ {totalPrice.toFixed(2)}</Text>
           ) : (
-            <Text style={styles.price}>S/.{precioTotal}</Text>
+            <Text style={styles.price}>$ {precioTotal.toFixed(2)}</Text>
           )}
         </View>
       </View>
