@@ -11,7 +11,7 @@ import {
 const Categories = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Categorias</Text>
+      <Text style={styles.title}>Locales Disponibles</Text>
       <View style={styles.list}>
         {
           categories.map((e, i) => (

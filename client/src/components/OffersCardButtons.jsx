@@ -3,13 +3,13 @@ import React from 'react'
 import { fonts, colors } from '../utils/theme'
 import ButtonReutil from './ButtonReutil'
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen'
-// import { WaiterModalConfirm } from './WaiterModalConfirm'
+import { WaiterModalConfirm } from './WaiterModalConfirm'
 
 const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
   return (
     <View style={styles.content}>
       <View style={styles.contentWaiter}>
-        {/* <WaiterModalConfirm /> */}
+        <WaiterModalConfirm />
       </View>
       <View style={styles.contentButtons}>
         <ButtonReutil

@@ -21,12 +21,12 @@ const OrderList = ({ screen, dish }) => {
           <View style={styles.spaceText}>
             <View>
               <Text style={styles.text}>{dish.name}</Text>
-              <Text style={styles.price}>{`S/.${dish.price.toFixed(2)}`}</Text>
+              <Text style={styles.price}>{`$/${dish.price.toFixed(2)}`}</Text>
             </View>
             <View style={styles.quantIcon}>
               <Text style={styles.quantity}>{dish.quantity}</Text>
               <TouchableOpacity onPress={() => deleteDish(dish.id)}>
-                {/* <TrashIcon /> */}<Text>X</Text>
+                {/* <TrashIcon /> */}<Text style={styles.x}>X</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -95,6 +95,11 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     letterSpacing: 0,
     color: colors.secundary2,
+  },
+  x:{
+   color: colors.primaryTomato,
+   fontSize:20,
+   alignItems: "center"
   },
 })
 

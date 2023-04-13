@@ -31,7 +31,8 @@ const ModalPaymentConfirmed = ({ paymentCode, modalVisible, setModalVisible, num
             {/* <Confeti style={styles.iconModal} /> */}
 
             <Text style={styles.modalText}>Pago Confirmado</Text>
-            <Text style={styles.modalText2}>Código de pago: #{numeros}</Text>
+            <Text style={styles.modalText2}>Código de pago:</Text>
+            <Text style={styles.modalText3}>#{numeros}</Text>
             <View style={styles.buttonModalContainer}>
               <Pressable style={styles.button} onPress={handleRediret}>
                 <Text style={styles.textStyle}>Revisar Comprobante</Text>
@@ -54,14 +55,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: colors.secundary3,
-    shadowColor: '#008b8b',
-    shadowOffset: {
-      width: 4,
-      height: 5,
-    },
-    shadowOpacity: 1,
-    // shadowRadius: 5.84,
-    elevation: 7,
+    elevation: 9,
+    opacity: 0.9,
   },
 
   // modal
@@ -129,6 +124,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: hp('-2%'),
     color: colors.secundary8,
+  },
+  modalText3:{
+     fontSize: 18,
+    fontFamily: fonts.montserrat.bold,
+    fontWeight: '300',
+    color: colors.primaryTomato,
   },
 
   iconModal: {

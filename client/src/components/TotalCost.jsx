@@ -7,7 +7,7 @@ import {
 import { useSelector } from 'react-redux'
 import { colors, fonts } from '../utils/theme'
 
-const TotalCost = ({ sliceState, order = true }) => {
+const TotalCost = ({ sliceState, order = false }) => {
   const totalPrice = useSelector(
     (state) => state.orderState[sliceState || 'totalPrice']
   )
@@ -28,9 +28,9 @@ const TotalCost = ({ sliceState, order = true }) => {
           </View>
           <View style={styles.line}></View>
           {order ? (
-            <Text style={styles.price}>$.{preOrderPrice.toFixed(2)}</Text>
+            <Text style={styles.price}>S/.{preOrderPrice.toFixed(2)}</Text>
           ) : (
-            <Text style={styles.price}>$.{precioTotal}</Text>
+            <Text style={styles.price}>S/.{precioTotal}</Text>
           )}
         </View>
       </View>
