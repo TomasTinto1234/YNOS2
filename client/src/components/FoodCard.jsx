@@ -150,7 +150,7 @@ import {
     more:{
       fontSize:35,
       color: colors.primaryTomato
-    }
+    },
   })
   
   export default FoodCard

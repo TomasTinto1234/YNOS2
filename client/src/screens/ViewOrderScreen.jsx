@@ -6,17 +6,17 @@ import {
 } from 'react-native-responsive-screen'
 import TitlePage from '../components/TitlePage'
 // import StateOrder from '../components/StateOrder'
-// import YourProductList from '../components/YourProductList'
-// import BigButtonPay from '../components/BigButtonPay'
+import YourProductList from '../components/YourProductList'
+import BigButtonPay from '../components/BigButtonPay'
 
 const ViewOrderScreen = () => {
   return (
     <View style={styles.container}>
       <TitlePage text='Ver pedidos' route='/menucard/0' white={false} />
       {/* <StateOrder /> */}
-      {/* <YourProductList screen={'viewOrderScreen'} /> */}
+      <YourProductList screen={'viewOrderScreen'} />
       <View style={styles.btn}>
-        {/* <BigButtonPay text='Pagar' route='/pay' /> */}
+        <BigButtonPay text='Pagar' route='/pay' />
       </View>
     </View>
   )

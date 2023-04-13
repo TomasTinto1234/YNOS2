@@ -4,7 +4,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { fonts } from '../utils/theme';
+import { colors, fonts } from '../utils/theme';
 
 const NearMe = () => {
   const [pressedNearMe, setPressedNearMe] = useState(false);
@@ -31,7 +31,7 @@ const NearMe = () => {
   };
 
   const buttonStyleNearme = {
-    backgroundColor: pressedNearMe ? '#EB5757' : '#fff',
+    backgroundColor: pressedNearMe ? colors.mediumseagreen : '#fff',
     paddingVertical: 6,
     paddingHorizontal: 5,
     borderRadius: 5,
@@ -43,11 +43,19 @@ const NearMe = () => {
     shadowOffset: { width: 0.5, height: 2 },
     flexDirection: "row",
     width: 110,
-    gap: 5
+    gap: 5,
+    borderBottomWidth: 1,
+    borderRightWidth:1,
+    borderLeftWidth:1,
+    borderTopWidth:1,
+    borderBottomColor: colors.secundary8,
+    borderTopColor: colors.secundary8,
+    borderRightColor: colors.secundary8,
+    borderLeftColor: colors.secundary8,
   };
 
   const buttonStylePromociones = {
-    backgroundColor: pressedPromo ? '#ff6347' : '#fff',
+    backgroundColor: pressedPromo ? colors.mediumseagreen : '#fff',
     paddingVertical: 6,
     paddingHorizontal: 5,
     borderRadius: 5,
@@ -59,11 +67,19 @@ const NearMe = () => {
     shadowOffset: { width: 0.5, height: 2 },
     flexDirection: "row",
     width: 110,
-    gap: 5
+    gap: 5,
+    borderBottomWidth: 1,
+    borderRightWidth:1,
+    borderLeftWidth:1,
+    borderTopWidth:1,
+    borderBottomColor: colors.secundary8,
+    borderTopColor: colors.secundary8,
+    borderRightColor: colors.secundary8,
+    borderLeftColor: colors.secundary8,
   };
 
   const buttonStylePopulares = {
-    backgroundColor: pressedPopular ? '#ff6347' : '#fff',
+    backgroundColor: pressedPopular ? colors.mediumseagreen : '#fff',
     paddingVertical: 6,
     paddingHorizontal: 5,
     borderRadius: 5,
@@ -75,7 +91,15 @@ const NearMe = () => {
     shadowOffset: { width: 0.5, height: 2 },
     flexDirection: "row",
     width: 110,
-    gap: 5
+    gap: 5,
+     borderBottomWidth: 1,
+    borderRightWidth:1,
+    borderLeftWidth:1,
+    borderTopWidth:1,
+    borderBottomColor: colors.secundary8,
+    borderTopColor: colors.secundary8,
+    borderRightColor: colors.secundary8,
+    borderLeftColor: colors.secundary8,
   };
 
   return (

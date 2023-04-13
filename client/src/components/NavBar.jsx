@@ -34,7 +34,7 @@ const Navbar = () => {
             styles.navbar_button,
             {
               bottom: activeButton === 'home' ? 30 : 0,
-              backgroundColor: activeButton === 'home' ? '#3cb371' : colors.secundary3,
+              backgroundColor: activeButton === 'home' ? colors.mediumseagreen : colors.secundary3,
             },
           ]}
         >
@@ -59,7 +59,7 @@ const Navbar = () => {
             styles.navbar_button,
             {
               bottom: activeButton === 'qr' ? 25 : 0,
-              backgroundColor: activeButton === 'qr' ? '#3cb371' : colors.secundary3,
+              backgroundColor: activeButton === 'qr' ? colors.mediumseagreen : colors.secundary3,
             },
           ]}
         >
@@ -82,7 +82,7 @@ const Navbar = () => {
             styles.navbar_button,
             {
               bottom: activeButton === 'perfil' ? 30 : 0,
-              backgroundColor: activeButton === 'perfil' ? '#3cb371' : colors.secundary3,
+              backgroundColor: activeButton === 'perfil' ? colors.mediumseagreen : colors.secundary3,
             },
           ]}
         >
@@ -100,35 +100,35 @@ export default Navbar
 
 const styles = StyleSheet.create({
   navbar_container: {
-    backgroundColor: colors.secundary4,
-    borderTopStartRadius: 80,
-    borderTopEndRadius: 80,
-    height: 90,
+    // backgroundColor: colors.secundary1,
+    borderTopStartRadius: 50,
+    borderTopEndRadius: 50,
+    height: 95,
     width: wp(100),
     flexDirection: 'row',
-    elevation: 7,
-    paddingHorizontal: 30,
-    position: 'absolute',
-    bottom: 0,
-    borderWidth: 1,
-    borderColor: '#ddd',
+    // elevation: 7,
+    paddingHorizontal: 20,
+    // position: 'absolute',
+    // bottom: 0,
+    // borderWidth: 0.25,
+    // borderColor: '#008b8b',
     alignItems: 'center',
     justifyContent: 'space-between',
-    shadowColor: '#000',
+    shadowColor: '#008b8b',
     shadowOffset: {
       width: 4,
       height: 5,
     },
     shadowOpacity: 1,
-    shadowRadius: 5.84,
+    // shadowRadius: 5.84,
     elevation: 7,
   },
   navbar_button: {
     width: 90,
     height: 90,
-    marginVertical: -40,
-    transitionDuration: '0.6s',
-    paddingVertical: 20,
+    marginVertical: -5,
+    transitionDuration: '1s',
+    paddingVertical: 5,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 50,

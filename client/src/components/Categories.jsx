@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: colors.secundary5,
+    color: colors.mediumseagreen,
     fontFamily: fonts.montserrat.bold,
     fontSize: 18,
     marginBottom: 10

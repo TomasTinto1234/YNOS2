@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "YNOS1",
-    "slug": "YNOS1",
+    "name": "YNOS",
+    "slug": "YNOS",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/DALL·E20.png",
+    "icon": "./assets/DALL·E.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/DALL·E.png",
@@ -20,7 +20,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/DALL·E.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#008b8b"
       }
     },
     "web": {

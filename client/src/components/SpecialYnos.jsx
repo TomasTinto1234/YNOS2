@@ -31,9 +31,17 @@ const SpecialYnos = () => {
       uri: require('../../assets/descarga(2).jpeg')
     },
     {
+      name: 'Image 5',
+      uri: require('../../assets/mostaza1.png')
+    },
+    {
+      name: 'Image 6',
+      uri: require('../../assets/sturbucks.jpeg')
+    },
+    {
       name: 'Image 3',
       uri: require('../../assets/descarga.png')
-    }
+    },
   ];
   const handleButtonPress = (index) => {
     setActiveIndex(index);
@@ -42,14 +50,14 @@ const SpecialYnos = () => {
   };
 
   const handleScroll = (event) => {
-    const index = Math.round(event.nativeEvent.contentOffset.x / 120);
+    const index = Math.round(event.nativeEvent.contentOffset.x / 220);
     setActiveIndex(index);
   };
   return (
     <View style={styles.carouselContainer}>
       <View style={styles.borderContainer}>
         <View style={styles.rfBorder} />
-        <Text style={styles.text}>Mejores Restaurantes en Ynos</Text>
+        <Text style={styles.text}>Mejores Restaurantes</Text>
         <View style={styles.rfBorder} />
       </View>
       <ScrollView
@@ -89,7 +97,7 @@ const SpecialYnos = () => {
 
 const styles = StyleSheet.create({
   carouselContainer: {
-    width: wp("90%"),
+    width: wp("95%"),
     overflow: "hidden",
   },
   slideContainer: {
@@ -103,10 +111,10 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 10,
+    marginTop: 15,
   },
   activeButton: {
-    backgroundColor: colors.primaryTomato,
+    backgroundColor: colors.mediumseagreen,
   },
   buttonText: {
     color: "black",
@@ -121,10 +129,10 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
   indicator: {
-    width: 35,
-    height: 4,
+    width: 50,
+    height: 7,
     borderRadius: 4,
-    marginHorizontal: 5,
+    marginHorizontal: 8,
     backgroundColor: colors.secundary3,
   },
 

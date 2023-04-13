@@ -35,7 +35,7 @@ const OrderList = ({ screen, dish }) => {
       {screen === 'viewOrderScreen' && (
         <View style={styles.spaceText}>
           <Text style={styles.text}>{dish.name}</Text>
-          <Text style={styles.text}>{state}</Text>
+          <Text style={styles.textState}>{state}</Text>
         </View>
       )}
       {screen === 'payScreen' && (
@@ -59,7 +59,15 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 21,
     letterSpacing: 0,
-    color: colors.secundary2,
+    color: colors.primaryTomato,
+  },
+
+  textState:{
+    fontFamily: fonts.montserrat.medium,
+    fontSize: 14,
+    lineHeight: 21,
+    letterSpacing: 0,
+    color: colors.mediumseagreen,
   },
 
   // Order Screen
