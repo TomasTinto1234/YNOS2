@@ -1,8 +1,11 @@
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, Text } from 'react-native'
 import React from 'react'
 import { fonts, colors } from '../utils/theme'
 import ButtonReutil from './ButtonReutil'
-import { widthPercentageToDP as wp } from 'react-native-responsive-screen'
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 import { WaiterModalConfirm } from './WaiterModalConfirm'
 
 const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
@@ -18,6 +21,8 @@ const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
           styleText={statusBtn === 'carta' ? styles.textPress : styles.text}
           action={viewLetter}
         />
+      </View>
+      <View style={styles.contentButtons}>
         <ButtonReutil
           text={'Oferta Ynos'}
           colorBtn={statusBtn === 'offer' ? styles.buttonPress : styles.button}
@@ -32,16 +37,16 @@ const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
 const styles = StyleSheet.create({
   content: {
     flexDirection: 'row',
-    gap: 20,
+    gap: 15,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingVertical: 10,
-    paddingHorizontal: 4,
+    paddingVertical: 2,
+    paddingHorizontal: 10,
     width: wp('100%'),
   },
   contentWaiter: {
     borderRightWidth: 1,
-    borderRightColor: colors.primaryGreen,
+    borderRightColor: colors.primaryTomato,
     paddingHorizontal: 10,
   },
   contentButtons: {
@@ -52,15 +57,16 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   buttonPress: {
-    backgroundColor: colors.primaryGreen,
+    backgroundColor: colors.mediumseagreen,
     paddingHorizontal: 1,
     paddingVertical: 10,
-    borderRadius: 6,
+    borderRadius: 15,
     width: wp('30%'),
+    height: hp('5%')
   },
   textPress: {
     fontFamily: fonts.montserrat.medium,
-    color: colors.secundary3,
+    color: "#fff",
     textAlign: 'center',
   },
   button: {
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: fonts.montserrat.medium,
-    color: "#fff",
+    color: colors.secundary3,
     textAlign: 'center',
   },
 })

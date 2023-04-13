@@ -32,7 +32,6 @@ const OptionsViewRestorant = () => {
 
   return (
     <View>
-      <ScrollView contentContainerStyle={styles.scroll}>
       <View style={styles.containerInterno}>
         <OffersCardButtons
           viewOffer={handleViewOffert}
@@ -42,18 +41,17 @@ const OptionsViewRestorant = () => {
       </View>
       {viewOffer && viewOffer}
       {viewLetter && viewLetter}
-      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   containerInterno: {
-    paddingBottom: 4,
+    // paddingBottom: 4,
     backgroundColor: colors.primaryGreen,
   },
   scroll: {
-    gap: 25,
+    // gap: 55,
     alignItems: 'center'
   },
 });

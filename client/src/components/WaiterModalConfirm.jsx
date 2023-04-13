@@ -27,7 +27,7 @@ export const WaiterModalConfirm = () => {
     setIfYes(!ifYes);
   };
 
-  const delay = 9.9;
+  const delay = 1.5;
 
   // useEffect para que luego de tocar "Si" el proximo modal se cierre despues de los 0.9 segs
   useEffect(() => {

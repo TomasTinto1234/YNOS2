@@ -109,31 +109,30 @@ import {
   const style = StyleSheet.create({
     container: {
       width: wp('100'),
-      maxWidth: wp('100'),
-      height: hp('60'),
-      maxHeight: hp('100'),
+      // maxWidth: wp('100'),
+      height: hp('100'),
+      // maxHeight: hp('100'),
       paddingHorizontal: 5,
-      paddingVertical: -10,
+      // paddingVertical: -10,
       backgroundColor: colors.primaryGreen,
     },
     containerView: {
       flexDirection: 'row',
       justifyContent: 'center',
-      marginVertical: 2,
+      marginVertical: 1,
       gap: 13,
       paddingVertical: 3,
       backgroundColor: colors.primaryGreen,
     },
     textButton: {
       textAlign: 'center',
-      fontFamily: fonts.roboto.bold,
-      color: "#fff",
+      fontFamily: fonts.roboto.medium,
+      color: colors.secundary3,
       lineHeight: 16.41,
-      fontSize: 15,
+      fontSize: 10,
     },
     cardBox: {
       height: hp(60),
-      marginTop: 5
     },
     button: {
       justifyContent: 'center',
@@ -143,24 +142,17 @@ import {
       height: hp(4),
     },
     buttonSelected: {
-      width: wp(32),
-      height: hp(4),
       backgroundColor: colors.mediumseagreen,
-      padding: 5,
-      shadowColor: 'black',
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 1,
-      shadowRadius: 6,
-      elevation: 5,
-      borderRadius: 8,
-      color: 'red',
+      paddingHorizontal: 1,
+      paddingVertical: 10,
+      borderRadius: 15,
+      width: wp('30%'),
+      height: hp('5%')
     },
     textbuttonSelected: {
-      textAlign: 'center',
-      fontFamily: fonts.roboto.bold,
-      fontSize: 15,
-      lineHeight: 16.41,
-      color: colors.secundary3,
+      fontFamily: fonts.montserrat.medium,
+    color: "#fff",
+    textAlign: 'center',
     },
   
     menu_container: {

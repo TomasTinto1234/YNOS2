@@ -5,11 +5,6 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-// import { BsArrowLeft } from "react-icons/bs";
-// import FontAwesome, {
-//   SolidIcons,
-//   RegularIcons,
-// } from "react-native-fontaweasome";
 import flecha from '../../assets/flechaizquierda.png'
 
 const TitlePage = ({ text, route, white }) => {
@@ -25,12 +20,10 @@ const TitlePage = ({ text, route, white }) => {
           {white ? (
             <View style={styles.backContainer}>
               <Image style={styles.backgroundImageWhite} source={flecha} />
-              {/* <FontAwesome icon={SolidIcons.FaArrow} /> */}
             </View>
           ) : (
             <View style={styles.backContainer}>
                <Image style={styles.backgroundImage} source={flecha} />
-              {/* <FontAwesome icon={SolidIcons.FaArrow} /> */}
             </View>
           )}
         </TouchableOpacity>
@@ -101,18 +94,12 @@ const styles = StyleSheet.create({
     width: wp(10),
     height: hp(5),
     left:10,
-    // marginTop:10,
-    // resizeMode: 'cover',
-    // opacity: 0.56,
     backgroundColor: colors.mediumseagreen,
   },
   backgroundImageWhite:{
     width: wp(10),
     height: hp(5),
     left:10,
-    // marginTop:10,
-    // resizeMode: 'cover',
-    // opacity: 0.56,
     backgroundColor: "#fff",
   },
 });
