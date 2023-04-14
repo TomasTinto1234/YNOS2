@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primaryTomato,
   },
   button2: {
-    backgroundColor: colors.mediumseagreen,
+    backgroundColor: colors.secundary4,
   },
   buttonModalContainer: {
     flexDirection: "row",

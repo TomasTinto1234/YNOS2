@@ -1,57 +1,63 @@
 import React from "react";
-import { View, StyleSheet, Text, ScrollView, Image } from "react-native";
-import Descarga3 from "../../assets/descarga3.png";
-import Discount from "../../assets/Discount.svg";
-import HeartLike from "../../assets/HeartLike.svg";
-import Stars from "../../assets/stars.svg";
+import { View, StyleSheet, Text, ScrollView, Image, TouchableHighlight } from "react-native";
+import { useNavigate } from 'react-router-native'
+import { colors, fonts } from "../utils/theme";
 
 const MiniatureRestaurant = () => {
-
+  const navigation = useNavigate()
   const data = [
     {
-      name: 'Image 6',
-      uri: require('../../assets/sturbucks.jpeg')
+      name: 'Sturbucks',
+      uri: require('../../assets/sturbucks.jpeg'),
+      description: 'CAFETERIA, POSTRES, MEDIALUNAS'
     },
     {
-      name: 'Image 5',
-      uri: require('../../assets/mostaza1.png')
+      name: 'mostaza',
+      uri: require('../../assets/mostaza1.png'),
+      description: 'RESTAURANTE DE COMIDA RAPIDA'
     },
     {
-      name: 'Image 1',
-      uri: require('../../assets/descarga3.png')
+      name: 'Pumper Nic',
+      uri: require('../../assets/descarga3.png'),
+      description: 'PAPACHOS PROVOCA A DIARIO, CON CARIÑO, ARTESANALMENTE Y CON LOS INSUMOS MÁS FRESCOS. '
     },
     {
-      name: 'Image 2',
-      uri: require('../../assets/descarga(2).jpeg')
+      name: 'Mc Donals',
+      uri: require('../../assets/descarga(2).jpeg'),
+      description: 'RESTAURANTE DE COMIDA RAPIDA'
     },
     {
-      name: 'Image 3',
-      uri: require('../../assets/descarga.png')
+      name: 'Burger King',
+      uri: require('../../assets/descarga.png'),
+      description: 'PAPACHOS PROVOCA A DIARIO, CON CARIÑO, ARTESANALMENTE Y CON LOS INSUMOS MÁS FRESCOS. '
     },
   ]
   return (
     <View >
-      {/* <HeartLike style={styles.heart} /> */}
-      {/* <Descarga3 style={styles.imagerestaurant} /> */}
-      {/* <View style={styles.text}> */}
-        {/* <Discount style={styles.discount} /> */}
-        {/* <View style={styles.nameCheck}>
-          <Text></Text>
-        </View> */}
-        {/* <Stars /> */}
-      {/* </View> */}
       <View >
       <ScrollView
         pagingEnabled={true}
         snapToInterval={220}
         showsHorizontalScrollIndicator={false}
         >
+         
         {data.map((item, index) => (
+              <TouchableHighlight
+              key={index}
+        underlayColor='none'
+        activeOpacity={1}
+        onPress={() => {
+          navigation('/menucard/0')
+        }}
+      >
           <View key={index} style={styles.container}>
             <Image source={item.uri} style={styles.imagerestaurant}/>
-            <Text style={styles.slideText}>{data.name}</Text>
+            <Text style={styles.slideText}>{item.name}</Text>
+            <Text  style={styles.description}>{item.description}</Text>
           </View>
+              </TouchableHighlight>
         ))}
+      
         </ScrollView>
         </View>
     </View>
@@ -86,9 +92,12 @@ const styles = StyleSheet.create({
 
   },
   slideText:{
-    position: "absolute",
-    color:"red",
-  },
+    // position: "absolute",
+    color: colors.primaryTomato,
+    left: 70,
+    fontSize:22 ,
+    textAlign:"center"
+   },
 
   imagerestaurant: {
     position: "absolute",
@@ -97,6 +106,14 @@ const styles = StyleSheet.create({
     left:2,
     borderRadius: 15,
     },
+
+    description:{
+      width:150,
+      // height:200,
+      left: 170,
+      color: colors.secundary8,
+      
+    }
 });
 
 export default MiniatureRestaurant;

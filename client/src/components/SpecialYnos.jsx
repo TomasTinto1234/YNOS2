@@ -50,7 +50,7 @@ const SpecialYnos = () => {
   };
 
   const handleScroll = (event) => {
-    const index = Math.round(event.nativeEvent.contentOffset.x / 220);
+    const index = Math.round(event.nativeEvent.contentOffset.x / 120);
     setActiveIndex(index);
   };
   return (
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   },
   indicator: {
     width: 50,
-    height: 7,
+    height: 10,
     borderRadius: 4,
     marginHorizontal: 8,
     backgroundColor: colors.secundary3,
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     color: colors.secundary5,
     fontSize: 16,
-    fontWeight: "600",
+    fontWeight: "900",
     lineHeight: 36,
   },
 });

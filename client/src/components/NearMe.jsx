@@ -154,6 +154,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.montserrat.regular,
     width: "auto",
     alignItems: "center",
+    color: colors.secundary5,
   },
 });
 

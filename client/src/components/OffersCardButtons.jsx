@@ -1,5 +1,5 @@
-import { View, StyleSheet, Text } from 'react-native'
-import React from 'react'
+import { View, StyleSheet, ScrollView, Text } from 'react-native'
+import React, { useState, useRef } from 'react'
 import { fonts, colors } from '../utils/theme'
 import ButtonReutil from './ButtonReutil'
 import {
@@ -7,13 +7,29 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import { WaiterModalConfirm } from './WaiterModalConfirm'
+import ViewOrderButton from "./ViewOrderButton"
 
 const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
+  
+  const scrollViewRef = useRef(null);
+
+  const handleScroll = (event) => {
+    const index = Math.round(event.nativeEvent.contentOffset.x / 220);
+    // setActiveIndex(index);
+  };
+
   return (
     <View style={styles.content}>
       <View style={styles.contentWaiter}>
         <WaiterModalConfirm />
       </View>
+      <ScrollView
+        ref={scrollViewRef}
+        horizontal
+        pagingEnabled={true}
+        snapToInterval={220}
+        showsHorizontalScrollIndicator={false}
+        onScroll={handleScroll}>
       <View style={styles.contentButtons}>
         <ButtonReutil
           text={'Carta'}
@@ -22,6 +38,8 @@ const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
           action={viewLetter}
         />
       </View>
+      <Text> </Text>
+      <Text> </Text>
       <View style={styles.contentButtons}>
         <ButtonReutil
           text={'Oferta Ynos'}
@@ -30,6 +48,11 @@ const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
           action={viewOffer}
         />
       </View>
+      <Text> </Text>
+      <Text> </Text>
+      <ViewOrderButton />
+       </ScrollView>
+
     </View>
   )
 }
@@ -65,7 +88,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 6,
     elevation: 4,
-    borderRadius: 8,
+    borderRadius: 18,
     paddingHorizontal:wp(4),
     justifyContent:'center'
   },
@@ -75,16 +98,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   button: {
-    backgroundColor: colors.primaryGreen,
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 6,
-    width: wp('30%'),
+    justifyContent: 'center',
+    borderRadius: 8,
+    backgroundColor: colors.secundary6,
+    minWidth: wp(30),
+    minHeight: hp(4),
+    paddingHorizontal:wp(4),
   },
   text: {
-    fontFamily: fonts.montserrat.medium,
-    color: colors.secundary3,
     textAlign: 'center',
+    fontFamily: fonts.roboto.medium,
+    color: colors.primaryGreen,
+    lineHeight: 16.41,
+    fontSize: 15,
   },
 })
 
