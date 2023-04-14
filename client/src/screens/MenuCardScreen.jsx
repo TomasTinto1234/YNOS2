@@ -17,7 +17,6 @@ import MiniatureRestaurant from "../components/MiniatureRestaurant"
   const logo = restaurants[id].image;
   return (
     <SafeAreaView style={styles.container}>
-        {/* <TitlePage text={'Hacer pedido'} white={false} route={'/'}/> */}
       <BackgroundCard logo={logo} />
       <OptionsViewRestorant />
       <View style={styles.btn}>

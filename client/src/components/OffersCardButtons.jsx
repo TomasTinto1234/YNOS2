@@ -57,12 +57,17 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   buttonPress: {
+    minWidth: wp(30),
+    minHeight: hp(4),
     backgroundColor: colors.mediumseagreen,
-    paddingHorizontal: 1,
-    paddingVertical: 10,
-    borderRadius: 15,
-    width: wp('30%'),
-    height: hp('5%')
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 1,
+    shadowRadius: 6,
+    elevation: 4,
+    borderRadius: 8,
+    paddingHorizontal:wp(4),
+    justifyContent:'center'
   },
   textPress: {
     fontFamily: fonts.montserrat.medium,

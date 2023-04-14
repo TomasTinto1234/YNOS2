@@ -18,8 +18,8 @@ const OrderScreen = () => {
           <TotalCost order />
         </ScrollView>
       </View>
-      <View style={styles.btn}>
         <BigButtonPay text='Ordenar' route='/vieworder' order />
+      <View style={styles.btn}>
       </View>
     </View>
   )

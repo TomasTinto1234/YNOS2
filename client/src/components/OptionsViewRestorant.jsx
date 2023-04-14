@@ -1,9 +1,8 @@
-import { StyleSheet, ScrollView, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import OffersCardButtons from "./OffersCardButtons";
 import OffersYnos from "./OffersYnos";
-  import { fonts, colors } from '../utils/theme'
-  import LetterFilters from "./LetterFilters";
+import LetterFilters from "./LetterFilters";
 
 const OptionsViewRestorant = () => {
   // el estado almacena el componente que se debe mostrar segun el boton presionado
@@ -47,12 +46,8 @@ const OptionsViewRestorant = () => {
 
 const styles = StyleSheet.create({
   containerInterno: {
-    // paddingBottom: 4,
-    backgroundColor: colors.primaryGreen,
-  },
-  scroll: {
-    // gap: 55,
-    alignItems: 'center'
+    paddingBottom: 4,
+    backgroundColor: "white",
   },
 });
 

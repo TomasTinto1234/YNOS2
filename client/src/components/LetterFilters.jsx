@@ -106,62 +106,80 @@ import {
       </View>
     )
   }
-  const style = StyleSheet.create({
-    container: {
-      width: wp('100'),
-      // maxWidth: wp('100'),
-      height: hp('100'),
-      // maxHeight: hp('100'),
-      paddingHorizontal: 5,
-      // paddingVertical: -10,
-      backgroundColor: colors.primaryGreen,
-    },
-    containerView: {
-      flexDirection: 'row',
-      justifyContent: 'center',
-      marginVertical: 1,
-      gap: 13,
-      paddingVertical: 3,
-      backgroundColor: colors.primaryGreen,
-    },
-    textButton: {
-      textAlign: 'center',
-      fontFamily: fonts.roboto.medium,
-      color: colors.secundary3,
-      lineHeight: 16.41,
-      fontSize: 10,
-    },
-    cardBox: {
-      height: hp(60),
-    },
-    button: {
-      justifyContent: 'center',
-      borderRadius: 8,
-      backgroundColor: colors.mediumseagreen,
-      width: wp(30),
-      height: hp(4),
-    },
-    buttonSelected: {
-      backgroundColor: colors.mediumseagreen,
-      paddingHorizontal: 1,
-      paddingVertical: 10,
-      borderRadius: 15,
-      width: wp('30%'),
-      height: hp('5%')
-    },
-    textbuttonSelected: {
-      fontFamily: fonts.montserrat.medium,
-    color: "#fff",
+ const style = StyleSheet.create({
+  container: {
+    width: wp('100'),
+    height: hp('46'),
+    maxHeight: hp('46'),
+    alignItems:'center',
+  },
+  containerView: {
+    width:wp(100),
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 13,
+    paddingVertical: 2,
+  },
+  scrollDish:{
+    alignItems:'center',
+    width:wp(100),
+    minHeight:hp(4),
+  },
+  scroll:{
+    paddingBottom:hp(0.5),
+    paddingHorizontal:wp(2),
+    minWidth:wp(100),
+    marginVertical:hp(0.5),
+    flexDirection:'row',
+    gap:10
+  },
+  textButton: {
     textAlign: 'center',
-    },
-  
-    menu_container: {
-      bottom: 0,
-      width: wp('100%'),
-      height: hp('100%'),
-      paddingHorizontal: 20,
-      zIndex: 1,
-    },
+    fontFamily: fonts.roboto.medium,
+    color: colors.primaryGreen,
+    lineHeight: 16.41,
+    fontSize: 15,
+  },
+  cardBox: {
+    height: hp(40),
+    marginTop: 6
+  },
+  button: {
+    justifyContent: 'center',
+    borderRadius: 8,
+    backgroundColor: colors.secundary6,
+    minWidth: wp(30),
+    minHeight: hp(4),
+    paddingHorizontal:wp(4),
+  },
+  buttonSelected: {
+    minWidth: wp(30),
+    minHeight: hp(4),
+    backgroundColor: colors.mediumseagreen,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 1,
+    shadowRadius: 6,
+    elevation: 4,
+    borderRadius: 8,
+    paddingHorizontal:wp(4),
+    justifyContent:'center'
+  },
+  textbuttonSelected: {
+    textAlign: 'center',
+    fontFamily: fonts.roboto.medium,
+    fontSize: 15,
+    lineHeight: 16.41,
+    color: colors.secundary6,
+  },
+
+  menu_container: {
+    bottom: 0,
+    width: wp('100%'),
+    height: hp('100%'),
+    paddingHorizontal: 20,
+    zIndex: 1,
+  },
   })
   
   export default LetterFilters
