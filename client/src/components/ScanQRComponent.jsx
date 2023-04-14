@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { StatusBar } from 'expo-status-bar';
 import { useNavigate } from 'react-router-native';
@@ -8,12 +8,9 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-// import TopLeft from '../../assets/qrtopizquierdo.svg';
-// import TopRight from '../../assets/qrtopderecho.svg';
-// import BotRight from '../../assets/qrbotderecho.svg';
-// import BotLeft from '../../assets/qrbotizquierdo.svg';
 
 export default function ScanQRComponent() {
+
   const [hasPermission, setHasPermission] = useState(false);
   const [scanned, setScanned] = useState(false);
   const navigate = useNavigate();
@@ -28,10 +25,6 @@ export default function ScanQRComponent() {
   if (!hasPermission) {
     return (
       <View>
-        <Text>Permisos a la camara</Text>
-        {/* <Button title="Volver Inicio" onPress={() => navigate('/')}>
-          Inicio
-        </Button> */}
       </View>
     );
   }
@@ -50,10 +43,7 @@ export default function ScanQRComponent() {
       />
       <StatusBar style="auto" />
       <View style={{ bottom: 430, position: 'absolute' }}>
-        {/* <TopLeft style={{ position: 'absolute', top: -260, left: -180 }} />
-        <TopRight style={{ position: 'absolute', top: -260, left: 110 }} />
-        <BotLeft style={{ position: 'absolute', top: 130, left: -180 }} />
-        <BotRight style={{ position: 'absolute', top: 140, left: 100 }} /> */}
+     
       </View>
     </View>
   );

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, Image } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { colors, fonts } from '../utils/theme'
-
+import Caja from "../../assets/cajas.png"
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -22,6 +22,7 @@ const BigButtonOrder = ({ route }) => {
 
   return (
     <TouchableOpacity style={styles.button} onPress={handlePress}>
+       <Image style={styles.backgroundImage} source={Caja} />
       <Text style={styles.text}>Ordenar</Text>
       <Text style={styles.text}>{`$ ${totalPrice.toFixed(2)}`}</Text>
     </TouchableOpacity>
@@ -50,4 +51,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: fonts.montserrat.bold,
   },
+  backgroundImage:{
+    width: wp(12),
+    height: hp(5),
+  }
+
 })

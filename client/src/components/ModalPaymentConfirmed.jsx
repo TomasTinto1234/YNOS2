@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Modal, Pressable, Image } from 'react-native'
+import { StyleSheet, View, Text, Modal, Pressable, Image, Alert } from 'react-native'
 import { fonts, colors } from '../utils/theme'
 import {
   widthPercentageToDP as wp,

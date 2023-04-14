@@ -50,7 +50,7 @@ const SpecialYnos = () => {
   };
 
   const handleScroll = (event) => {
-    const index = Math.round(event.nativeEvent.contentOffset.x / 120);
+    const index = Math.round(event.nativeEvent.contentOffset.x / 220);
     setActiveIndex(index);
   };
   return (
