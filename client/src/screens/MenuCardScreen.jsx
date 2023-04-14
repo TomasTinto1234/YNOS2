@@ -20,7 +20,7 @@ import MiniatureRestaurant from "../components/MiniatureRestaurant"
       <BackgroundCard logo={logo} />
       <OptionsViewRestorant />
       <View style={styles.btn}>
-        <BigButtonOrder route='/order' />
+        <BigButtonOrder route='/order' order/>
       </View>
     </SafeAreaView>
   );

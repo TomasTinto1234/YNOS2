@@ -24,7 +24,7 @@ const BigButtonOrder = ({ route }) => {
     <TouchableOpacity style={styles.button} onPress={handlePress}>
        <Image style={styles.backgroundImage} source={Caja} />
       <Text style={styles.text}>Ordenar</Text>
-      <Text style={styles.text}>{`$ ${totalPrice.toFixed(2)}`}</Text>
+      <Text style={styles.text1}>{`$ ${totalPrice.toFixed(2)}`}</Text>
     </TouchableOpacity>
   )
 }
@@ -46,7 +46,14 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.secundary3,
-    fontSize: 17,
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    fontFamily: fonts.montserrat.bold,
+  },
+  text1: {
+    color: colors.secundary3,
+    fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
     fontFamily: fonts.montserrat.bold,

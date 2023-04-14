@@ -7,6 +7,7 @@ import TitlePage from '../components/TitlePage'
 import YourProductList from '../components/YourProductList'
 import BigButtonPay from '../components/BigButtonPay'
 import TotalCost from '../components/TotalCost'
+import BigButtonOrder from '../components/BigButtonOrder'
 
 const OrderScreen = () => {
   return (
@@ -18,7 +19,7 @@ const OrderScreen = () => {
           <TotalCost order />
         </ScrollView>
       </View>
-        <BigButtonPay text='Ordenar' route='/vieworder' order />
+        <BigButtonOrder text='Ordenar' route='/vieworder' order />
       <View style={styles.btn}>
       </View>
     </View>

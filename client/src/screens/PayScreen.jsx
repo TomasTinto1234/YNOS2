@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, View, Pressable, Text } from "react-native";
+import { ScrollView, StyleSheet, View, Pressable, Text, Image } from "react-native";
 import React, { useState } from "react";
 import {
   heightPercentageToDP as hp,
@@ -12,6 +12,8 @@ import TotalCost from '../components/TotalCost'
 // import TypesOfPayments from '../components/TypesOfPayments'
 import ModalPaymentConfirmed from "../components/ModalPaymentConfirmed";
 import { fonts, colors } from "../utils/theme";
+import { useSelector } from 'react-redux'
+import Pagar from "../../assets/pagar.png"
 
 const PayScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -30,6 +32,12 @@ const PayScreen = () => {
     }
     setNumeros(nuevosNumeros);
   };
+  const { preOrder } = useSelector((state) => state.orderState)
+
+  const totalPrice = preOrder.reduce((acc, cur) => {
+    return acc + cur.price * cur.quantity
+  }, 0)
+
   return (
     <View style={styles.container}>
       <TitlePage text="Pagar" route="/vieworder" white={false} />
@@ -47,10 +55,13 @@ const PayScreen = () => {
         numeros={numeros}
       />
       <Pressable
-        style={styles.pressButton}
+         style={styles.button}
         onPress={() => handlePay(generarNumerosAleatorios())}
       >
-        <Text style={styles.text}>Pagar</Text>
+          <Image style={styles.backgroundImage} source={Pagar} />
+      <Text style={styles.text}>Pagar</Text>
+      <Text style={styles.text1}>{`$ ${totalPrice.toFixed(2)}`}</Text>
+        {/* <Text style={styles.text}>Pagar</Text> */}
       </Pressable>
       {/* <View style={styles.btn}>
         <BigButtonPay text='Pagar' route='/' />
@@ -138,4 +149,29 @@ const styles = StyleSheet.create({
     width: wp("50.00%"),
     height: hp("20.00%"),
   },
+  button: {
+    backgroundColor: colors.mediumseagreen,
+    borderRadius: 6,
+    width: wp('90%'),
+    height: wp('12%'),
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
+  text: {
+    color: colors.secundary3,
+    fontSize: 20,
+    textAlign: 'center',
+    fontFamily: fonts.montserrat.bold,
+  },
+  text1: {
+    color: colors.secundary3,
+    fontSize: 16,
+    textAlign: 'center',
+    fontFamily: fonts.montserrat.bold,
+  },
+  backgroundImage:{
+    width: wp(12),
+    height: hp(5),
+  }
 });
