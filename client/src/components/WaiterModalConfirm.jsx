@@ -14,8 +14,8 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import { fonts, colors } from "../utils/theme";
-import Campana from "../../assets/campanas.png";
-import Campanas from "../../assets/camp.png";
+import Campana from "../../assets/cam.png";
+import Campanas from "../../assets/timbre.png";
 import Mozo from "../../assets/mozo.png";
 
 export const WaiterModalConfirm = () => {
