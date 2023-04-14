@@ -1,71 +1,77 @@
 import React from "react";
-import { View, StyleSheet, Text, ScrollView, Image, TouchableHighlight } from "react-native";
-import { useNavigate } from 'react-router-native'
+import {
+  View,
+  StyleSheet,
+  Text,
+  ScrollView,
+  Image,
+  TouchableHighlight,
+} from "react-native";
+import { useNavigate } from "react-router-native";
 import { colors, fonts } from "../utils/theme";
 
 const MiniatureRestaurant = () => {
-  const navigation = useNavigate()
+  const navigation = useNavigate();
   const data = [
     {
-      name: 'Sturbucks',
-      uri: require('../../assets/sturbucks.jpeg'),
-      description: 'CAFETERIA, POSTRES, MEDIALUNAS'
+      name: "Sturbucks",
+      uri: require("../../assets/sturbucks.jpeg"),
+      description: "CAFETERIA, POSTRES, MEDIALUNAS",
     },
     {
-      name: 'mostaza',
-      uri: require('../../assets/mostaza1.png'),
-      description: 'RESTAURANTE DE COMIDA RAPIDA'
+      name: "mostaza",
+      uri: require("../../assets/mostaza1.png"),
+      description: "RESTAURANTE DE COMIDA RAPIDA",
     },
     {
-      name: 'Pumper Nic',
-      uri: require('../../assets/descarga3.png'),
-      description: 'PAPACHOS PROVOCA A DIARIO, CON CARIÑO, ARTESANALMENTE Y CON LOS INSUMOS MÁS FRESCOS. '
+      name: "Pumper Nic",
+      uri: require("../../assets/descarga3.png"),
+      description:
+        "PAPACHOS PROVOCA A DIARIO, CON CARIÑO, ARTESANALMENTE Y CON LOS INSUMOS MÁS FRESCOS. ",
     },
     {
-      name: 'Mc Donals',
-      uri: require('../../assets/descarga(2).jpeg'),
-      description: 'RESTAURANTE DE COMIDA RAPIDA'
+      name: "Mc Donals",
+      uri: require("../../assets/descarga(2).jpeg"),
+      description: "RESTAURANTE DE COMIDA RAPIDA",
     },
     {
-      name: 'Burger King',
-      uri: require('../../assets/descarga.png'),
-      description: 'PAPACHOS PROVOCA A DIARIO, CON CARIÑO, ARTESANALMENTE Y CON LOS INSUMOS MÁS FRESCOS. '
+      name: "Burger King",
+      uri: require("../../assets/descarga.png"),
+      description:
+        "PAPACHOS PROVOCA A DIARIO, CON CARIÑO, ARTESANALMENTE Y CON LOS INSUMOS MÁS FRESCOS. ",
     },
-  ]
+  ];
   return (
-    <View >
-      <View >
-      <ScrollView
-        pagingEnabled={true}
-        snapToInterval={220}
-        showsHorizontalScrollIndicator={false}
+    <View>
+      <View>
+        <ScrollView
+          pagingEnabled={true}
+          snapToInterval={220}
+          showsHorizontalScrollIndicator={false}
         >
-         
-        {data.map((item, index) => (
-              <TouchableHighlight
+          {data.map((item, index) => (
+            <TouchableHighlight
               key={index}
-        underlayColor='none'
-        activeOpacity={1}
-        onPress={() => {
-          navigation('/menucard/0')
-        }}
-      >
-          <View key={index} style={styles.container}>
-            <Image source={item.uri} style={styles.imagerestaurant}/>
-            <Text style={styles.slideText}>{item.name}</Text>
-            <Text  style={styles.description}>{item.description}</Text>
-          </View>
-              </TouchableHighlight>
-        ))}
-      
+              underlayColor="none"
+              activeOpacity={1}
+              onPress={() => {
+                navigation("/menucard/0");
+              }}
+            >
+              <View key={index} style={styles.container}>
+                <Image source={item.uri} style={styles.imagerestaurant} />
+                <Text style={styles.slideText}>{item.name}</Text>
+                <Text style={styles.description}>{item.description}</Text>
+              </View>
+            </TouchableHighlight>
+          ))}
         </ScrollView>
-        </View>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  
   container: {
     width: 318,
     height: 200,
@@ -89,31 +95,27 @@ const styles = StyleSheet.create({
 
   heart: {
     position: "absolute",
-
   },
-  slideText:{
-    // position: "absolute",
+  slideText: {
     color: colors.primaryTomato,
     left: 70,
-    fontSize:22 ,
-    textAlign:"center"
-   },
+    fontSize: 22,
+    textAlign: "center",
+  },
 
   imagerestaurant: {
     position: "absolute",
-    height:200,
-    width:160,
-    left:2,
+    height: 200,
+    width: 160,
+    left: 2,
     borderRadius: 15,
-    },
+  },
 
-    description:{
-      width:150,
-      // height:200,
-      left: 170,
-      color: colors.secundary8,
-      
-    }
+  description: {
+    width: 150,
+    left: 170,
+    color: colors.secundary8,
+  },
 });
 
 export default MiniatureRestaurant;

@@ -6,10 +6,9 @@ import {
 } from "react-native-responsive-screen";
 import TitlePage from "../components/TitlePage";
 import YourProductList from "../components/YourProductList";
-import BigButtonPay from "../components/BigButtonPay";
 import TotalCost from '../components/TotalCost'
 // import OrdersFromOthersMembers from '../components/OrdersFromOthersMembers'
-// import TypesOfPayments from '../components/TypesOfPayments'
+import TypesOfPayments from '../components/TypesOfPayments'
 import ModalPaymentConfirmed from "../components/ModalPaymentConfirmed";
 import { fonts, colors } from "../utils/theme";
 import { useSelector } from 'react-redux'
@@ -45,7 +44,7 @@ const PayScreen = () => {
         <ScrollView contentContainerStyle={styles.scrollView}>
           <YourProductList screen={"payScreen"} />
           {/* <OrdersFromOthersMembers /> */}
-          {/* <TypesOfPayments /> */}
+          <TypesOfPayments />
           <TotalCost sliceState={'totalPrice'} order/>
         </ScrollView>
       </View>
@@ -61,11 +60,7 @@ const PayScreen = () => {
           <Image style={styles.backgroundImage} source={Pagar} />
       <Text style={styles.text}>Pagar</Text>
       <Text style={styles.text1}>{`$ ${totalPrice.toFixed(2)}`}</Text>
-        {/* <Text style={styles.text}>Pagar</Text> */}
       </Pressable>
-      {/* <View style={styles.btn}>
-        <BigButtonPay text='Pagar' route='/' />
-      </View> */}
     </View>
   );
 };

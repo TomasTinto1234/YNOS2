@@ -13,34 +13,31 @@ import {
 } from "react-native-responsive-screen";
 import { colors, fonts } from "../utils/theme";
 
-
 const SpecialYnos = () => {
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   const scrollViewRef = useRef(null);
 
-
   const data = [
     {
-      name: 'Image 1',
-      uri: require('../../assets/descarga3.png')
+      name: "Image 1",
+      uri: require("../../assets/descarga3.png"),
     },
     {
-      name: 'Image 2',
-      uri: require('../../assets/descarga(2).jpeg')
+      name: "Image 2",
+      uri: require("../../assets/descarga(2).jpeg"),
     },
     {
-      name: 'Image 5',
-      uri: require('../../assets/mostaza1.png')
+      name: "Image 5",
+      uri: require("../../assets/mostaza1.png"),
     },
     {
-      name: 'Image 6',
-      uri: require('../../assets/sturbucks.jpeg')
+      name: "Image 6",
+      uri: require("../../assets/sturbucks.jpeg"),
     },
     {
-      name: 'Image 3',
-      uri: require('../../assets/descarga.png')
+      name: "Image 3",
+      uri: require("../../assets/descarga.png"),
     },
   ];
   const handleButtonPress = (index) => {
@@ -71,8 +68,7 @@ const SpecialYnos = () => {
         {data.map((item, index) => (
           <View key={index} style={styles.slideContainer}>
             <Image source={item.uri} />
-            {/* <Image source={{ uri: item }} style={styles.image} /> */}
-            <Text style={styles.slideText}>{ }</Text>
+            <Text style={styles.slideText}>nombre</Text>
           </View>
         ))}
       </ScrollView>
@@ -148,7 +144,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.secundary4,
   },
   text: {
-    fontStyle: 'normal',
+    fontStyle: "normal",
     marginLeft: 10,
     marginRight: 10,
     color: colors.secundary5,
