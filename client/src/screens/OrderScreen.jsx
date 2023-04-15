@@ -12,17 +12,17 @@ import BigButtonOrder from '../components/BigButtonOrder'
 const OrderScreen = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.visibleBox}>
-        <ScrollView contentContainerStyle={styles.scrollView}>
-          <TitlePage text={'Ordernar'} route={'/menucard/0'} />
-          <YourProductList screen={'orderScreen'} />
-          <TotalCost order />
-        </ScrollView>
-      </View>
-        <BigButtonOrder text='Ordenar' route='/vieworder' order />
-      <View style={styles.btn}>
-      </View>
+    <View style={styles.visibleBox}>
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        <TitlePage text={'Ordernar'} route={'/menucard/0'} />
+        <YourProductList screen={'orderScreen'} />
+        <TotalCost order />
+      </ScrollView>
     </View>
+    <View style={styles.btn}>
+      <BigButtonPay text='Ordenar' route='/vieworder' order />
+    </View>
+  </View>
   )
 }
 
