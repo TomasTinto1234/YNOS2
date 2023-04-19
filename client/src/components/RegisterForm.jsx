@@ -4,6 +4,7 @@ import {
   View,
   TextInput,
   StyleSheet,
+  SafeAreaView,
   TouchableOpacity,
   TouchableHighlight,
 } from 'react-native';
@@ -12,12 +13,16 @@ import { useDispatch } from 'react-redux';
 import { CheckBox } from 'react-native-elements';
 import { register } from '../redux/slices/user/userActions';
 import { useNavigate } from 'react-router-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 import { colors, fonts } from '../utils/theme';
 import { registerSchema } from '../utils/validationSearchScheme';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-const RegisterForm = () => {
+export default function RegisterForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isSelected, setSelection] = useState(false);
@@ -37,7 +42,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View>
         <Text>Nombre</Text>
         <Controller
@@ -70,7 +75,7 @@ const RegisterForm = () => {
           render={({ field: { onChange, onBlur, value } }) => (
             <TextInput
               placeholder="prueba@prueba.com"
-              // onBlur={onBlur}
+              onBlur={onBlur}
               onChangeText={onChange}
               value={value}
               style={styles.inputs}
@@ -119,13 +124,13 @@ const RegisterForm = () => {
         </Text>
       </View>
       <TouchableHighlight
-        underlayColor="#FFAD3F"
+        underlayColor={colors.primaryOrange}
         onPress={handleSubmit(onSubmit)}
         style={styles.but}
       >
         <Text style={styles.text3}>Crear cuenta</Text>
       </TouchableHighlight>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -133,13 +138,15 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     width: 340,
+    // height: wp('100.00%'),
     borderColor: '#A4A4A4',
     borderTopWidth: 1,
+    marginTop:15
   },
   but: {
     backgroundColor: colors.primaryGreen,
     height: 45,
-    bottom: 20,
+    bottom: 30,
     borderRadius: 10,
     paddingLeft: 105,
     paddingTop: 10,
@@ -150,7 +157,7 @@ const styles = StyleSheet.create({
     borderColor: '#A4A4A4',
     marginHorizontal: 1,
     marginVertical: 10,
-    paddingVertical: 6,
+    paddingVertical: 3,
     backgroundColor: 'white',
     paddingHorizontal: 12,
     borderRadius: 10,
@@ -179,7 +186,7 @@ const styles = StyleSheet.create({
     width: 140,
     paddingLeft: 10,
     fontFamily: fonts.montserrat.bold,
-    fontSize: 16,
+    fontSize: 19,
     color: 'white',
   },
   text4: {
@@ -187,5 +194,3 @@ const styles = StyleSheet.create({
     fontSize: 10,
   },
 });
-
-export default RegisterForm

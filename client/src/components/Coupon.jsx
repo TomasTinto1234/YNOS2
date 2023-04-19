@@ -17,6 +17,7 @@ import ModalReutil from './ModalReutil'
 import { useNavigate } from 'react-router-native'
 import { useDispatch } from 'react-redux'
 import { addCoupon } from '../redux/slices/order/orderSlice'
+// import Alert from '../../assets/alert.svg'
 
 const Coupon = ({ viewCheck }) => {
   const navigate = useNavigate()
@@ -73,10 +74,10 @@ const Coupon = ({ viewCheck }) => {
     <View style={styles.container}>
       <ScrollView style={styles.couponScroll}>
         <View style={viewCheck ? styles.couponElements : styles.couponSetWidth}>
-          <View style={styles.couponInfo}>
+          <View style={viewCheck ? styles.couponInfo : styles.couponSetGap}>
             <Image
               style={styles.couponImage}
-              source={require('../../assets/descarga.jpeg')}
+              source={require('../../assets/ofertaOne.png')}
             />
             <View style={styles.couponTexts}>
               <Text style={styles.couponSubtitle}>
@@ -102,10 +103,11 @@ const Coupon = ({ viewCheck }) => {
         </View>
 
         <View style={viewCheck ? styles.couponElements : styles.couponSetWidth}>
-          <View style={styles.couponInfo}>
+          <View style={viewCheck ? styles.couponInfo : styles.couponSetGap}>
+
             <Image
               style={styles.couponImage}
-              source={require('../../assets/descarga.jpeg')}
+              source={require('../../assets/ofertaTwo.png')}
             />
             <View style={styles.couponTexts}>
               <Text style={styles.couponSubtitle}>
@@ -132,11 +134,6 @@ const Coupon = ({ viewCheck }) => {
       </ScrollView>
 
       <View style={styles.couponModal}>{viewModal && viewModal}</View>
-      <View style={styles.alertBox}>
-        {/* <Alert /> */}
-        <Text>Podrás agregarlo a la hora de pagar.</Text>
-      </View>
-
       <View style={styles.couponAdd}>
         <TouchableOpacity style={styles.couponButton} onPress={addCouponValidate}>
           <Text style={styles.couponTextBtn}>Agregar cupón</Text>
@@ -171,8 +168,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   couponImage: {
-    width: wp('30%'),
-    height: hp('10%')
+    width: wp('20%'),
   },
   couponTexts: {
     height: hp('10%'),
@@ -184,13 +180,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     width: wp('94%'),
-    height: hp('20%'),
+    height: hp('18%'),
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: colors.secundary2,
     borderRadius: 10,
     justifyContent: 'center',
     marginBottom: 10,
+  },
+  couponSetGap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    gap: 25,
   },
   couponSubtitle: {
     fontFamily: fonts.montserrat.bold,
@@ -201,7 +204,7 @@ const styles = StyleSheet.create({
     fontSize: 13
   },
   couponScroll: {
-    height: hp('75%'),
+    height: hp('80%'),
     paddingVertical: 10,
   },
   couponAdd: {

@@ -14,9 +14,9 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import { fonts, colors } from "../utils/theme";
-import Campana from "../../assets/cam.png";
-import Campanas from "../../assets/timbre.png";
-import Mozo from "../../assets/mozo.png";
+import Campana from "../../assets2/cam.png";
+import Campanas from "../../assets2/timbre.png";
+import Mozo from "../../assets2/mozo.png";
 
 export const WaiterModalConfirm = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     height: hp("6.00%"),
   },
   button1: {
-    backgroundColor: colors.primaryTomato,
+    backgroundColor: colors.primaryGreen,
   },
   button2: {
     backgroundColor: colors.secundary4,
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.montserrat.regular,
     marginBottom: 15,
     textAlign: "center",
-    color: colors.primaryTomato,
+    color: colors.primaryGreen,
   },
 
   waiterIconButton: {
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
-    backgroundColor: colors.mediumseagreen,
+    backgroundColor: colors.primaryGreen,
     borderRadius: 15,
   },
   backgroundImage1: {

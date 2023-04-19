@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { StatusBar } from 'expo-status-bar';
 import { useNavigate } from 'react-router-native';
@@ -8,9 +8,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-
 export default function ScanQRComponent() {
-
   const [hasPermission, setHasPermission] = useState(false);
   const [scanned, setScanned] = useState(false);
   const navigate = useNavigate();
@@ -32,7 +30,7 @@ export default function ScanQRComponent() {
   const handleBarCodeScanned = ({ data }) => {
     setScanned(true);
     setHasPermission(!hasPermission);
-    navigate(`/`);
+    navigate(`/menucard/${data}`);
   };
 
   return (
@@ -43,7 +41,6 @@ export default function ScanQRComponent() {
       />
       <StatusBar style="auto" />
       <View style={{ bottom: 430, position: 'absolute' }}>
-     
       </View>
     </View>
   );

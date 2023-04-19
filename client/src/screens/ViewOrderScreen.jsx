@@ -5,7 +5,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
 import TitlePage from '../components/TitlePage'
-// import StateOrder from '../components/StateOrder'
+import StateOrder from '../components/StateOrder'
 import YourProductList from '../components/YourProductList'
 import BigButtonPay from '../components/BigButtonPay'
 
@@ -13,7 +13,7 @@ const ViewOrderScreen = () => {
   return (
     <View style={styles.container}>
       <TitlePage text='Ver pedidos' route='/menucard/0' white={false} />
-      {/* <StateOrder /> */}
+      <StateOrder />
       <YourProductList screen={'viewOrderScreen'} />
       <View style={styles.btn}>
         <BigButtonPay text='Pagar' route='/pay' />
@@ -21,6 +21,8 @@ const ViewOrderScreen = () => {
     </View>
   )
 }
+
+export default ViewOrderScreen
 
 const styles = StyleSheet.create({
   container: {
@@ -33,5 +35,3 @@ const styles = StyleSheet.create({
     bottom: hp(5),
   },
 })
-
-    export default ViewOrderScreen

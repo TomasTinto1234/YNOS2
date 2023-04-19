@@ -20,7 +20,7 @@ const Contacts = ({ guests, setGuests }) => {
   const contacts = useSelector((state) => state.userState.contacts)
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Contactos que ya tienen Ynos</Text>
+      <Text style={styles.title}>Contactos que ya tienen Half</Text>
       <ScrollView style={styles.contactsBox}>
         {contacts?.map((e) => {
           return (

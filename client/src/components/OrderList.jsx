@@ -1,14 +1,9 @@
 import { useState } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 // import TrashIcon from '../../assets/trash.svg'
 import { colors, fonts } from '../utils/theme'
 import { removeOrder } from '../redux/slices/order/orderSlice'
 import { useDispatch } from 'react-redux'
-import Tacho from "../../assets/tacho.png"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen'
 
 const OrderList = ({ screen, dish }) => {
   const dispatch = useDispatch()
@@ -26,12 +21,12 @@ const OrderList = ({ screen, dish }) => {
           <View style={styles.spaceText}>
             <View>
               <Text style={styles.text}>{dish.name}</Text>
-              <Text style={styles.price}>{`$ ${dish.price.toFixed(2)}`}</Text>
+              <Text style={styles.price}>{`$ .${dish.price.toFixed(2)}`}</Text>
             </View>
             <View style={styles.quantIcon}>
               <Text style={styles.quantity}>{dish.quantity}</Text>
               <TouchableOpacity onPress={() => deleteDish(dish.id)}>
-                <Image style={styles.backgroundImage1} source={Tacho} />
+                {/* <TrashIcon /> */}
               </TouchableOpacity>
             </View>
           </View>
@@ -40,13 +35,13 @@ const OrderList = ({ screen, dish }) => {
       {screen === 'viewOrderScreen' && (
         <View style={styles.spaceText}>
           <Text style={styles.text}>{dish.name}</Text>
-          <Text style={styles.textState}>{state}</Text>
+          <Text style={styles.text}>{state}</Text>
         </View>
       )}
       {screen === 'payScreen' && (
         <View style={styles.payContainer}>
-          <Text style={styles.text}> {dish.name} </Text>
-          <Text style={styles.price}>$ {dish.price.toFixed(2) || '0.00'}</Text>
+          <Text style={styles.text}>{dish.name}</Text>
+          <Text style={styles.price}>$ .{dish.price.toFixed(2) || '0.00'}</Text>
         </View>
       )}
     </View>
@@ -64,15 +59,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 21,
     letterSpacing: 0,
-    color: colors.primaryTomato,
-  },
-
-  textState:{
-    fontFamily: fonts.montserrat.medium,
-    fontSize: 14,
-    lineHeight: 21,
-    letterSpacing: 0,
-    color: colors.mediumseagreen,
+    color: colors.secundary2,
   },
 
   // Order Screen
@@ -101,18 +88,6 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     color: colors.secundary2,
   },
-  x:{
-   color: colors.primaryTomato,
-   fontSize:20,
-   alignItems: "center"
-  },
-  backgroundImage1:{
-    width: wp(5),
-    height: hp(3),
-    // resizeMode: 'cover',
-    // opacity: 0.56,
-    // backgroundColor: colors.mediumseagreen,
-  }
 })
 
 export default OrderList

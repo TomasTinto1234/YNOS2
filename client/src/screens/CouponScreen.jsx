@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   couponSHeader: {
     width: wp('100%'),
     height: hp('10%'),
-    backgroundColor: colors.mediumseagreen,
+    backgroundColor: colors.primaryGreen,
     flexDirection: 'row-reverse',
     justifyContent: 'flex-end',
     alignItems: 'center',

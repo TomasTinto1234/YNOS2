@@ -1,16 +1,12 @@
 import { View, StyleSheet, ScrollView, Text } from 'react-native'
-import React, { useState, useRef } from 'react'
+import React,{useRef} from 'react'
 import { fonts, colors } from '../utils/theme'
 import ButtonReutil from './ButtonReutil'
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
+import { widthPercentageToDP as wp } from 'react-native-responsive-screen'
 import { WaiterModalConfirm } from './WaiterModalConfirm'
-import ViewOrderButton from "./ViewOrderButton"
+import ViewOrderButton from './ViewOrderButton'
 
 const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
-  
   const scrollViewRef = useRef(null);
 
   const handleScroll = (event) => {
@@ -30,6 +26,7 @@ const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
         snapToInterval={220}
         showsHorizontalScrollIndicator={false}
         onScroll={handleScroll}>
+
       <View style={styles.contentButtons}>
         <ButtonReutil
           text={'Carta'}
@@ -37,22 +34,17 @@ const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
           styleText={statusBtn === 'carta' ? styles.textPress : styles.text}
           action={viewLetter}
         />
-      </View>
-      <Text> </Text>
-      <Text> </Text>
-      <View style={styles.contentButtons}>
         <ButtonReutil
           text={'Oferta Ynos'}
           colorBtn={statusBtn === 'offer' ? styles.buttonPress : styles.button}
           styleText={statusBtn === 'offer' ? styles.textPress : styles.text}
           action={viewOffer}
-        />
+          />
       </View>
       <Text> </Text>
       <Text> </Text>
       <ViewOrderButton />
-       </ScrollView>
-
+          </ScrollView>
     </View>
   )
 }
@@ -60,57 +52,46 @@ const OffersCardButtons = ({ viewOffer, viewLetter, statusBtn }) => {
 const styles = StyleSheet.create({
   content: {
     flexDirection: 'row',
-    gap: 15,
+    gap: 20,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingVertical: 2,
-    paddingHorizontal: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 4,
     width: wp('100%'),
   },
   contentWaiter: {
     borderRightWidth: 1,
-    borderRightColor: colors.primaryTomato,
+    borderRightColor: colors.secundary2,
     paddingHorizontal: 10,
   },
   contentButtons: {
     flexDirection: 'row',
     gap: 10,
     alignItems: 'center',
-    backgroundColor: colors.mediumseagreen,
-    borderRadius: 15,
   },
   buttonPress: {
-    minWidth: wp(30),
-    minHeight: hp(4),
-    backgroundColor: colors.mediumseagreen,
-    shadowColor: 'black',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 1,
-    shadowRadius: 6,
-    elevation: 4,
-    borderRadius: 18,
-    paddingHorizontal:wp(4),
-    justifyContent:'center'
+    backgroundColor: colors.primaryGreen,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+    width: wp('30%'),
   },
   textPress: {
-    fontFamily: fonts.montserrat.medium,
-    color: "#fff",
+    fontFamily: fonts.montserrat.regular,
+    color: colors.secundary6,
     textAlign: 'center',
   },
   button: {
-    justifyContent: 'center',
-    borderRadius: 8,
     backgroundColor: colors.secundary6,
-    minWidth: wp(30),
-    minHeight: hp(4),
-    paddingHorizontal:wp(4),
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+    width: wp('30%'),
   },
   text: {
-    textAlign: 'center',
-    fontFamily: fonts.roboto.medium,
+    fontFamily: fonts.montserrat.regular,
     color: colors.primaryGreen,
-    lineHeight: 16.41,
-    fontSize: 15,
+    textAlign: 'center',
   },
 })
 

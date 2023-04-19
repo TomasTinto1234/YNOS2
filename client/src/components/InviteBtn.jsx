@@ -1,12 +1,11 @@
-import { View, TouchableOpacity, StyleSheet, Image, Text } from "react-native";
+import { View, TouchableOpacity, StyleSheet, Image } from "react-native";
 import React, { useState } from "react";
 import { colors } from "../utils/theme";
 // import Add from "../../assets/add.svg";
 // import ThreePointOptions from "../../assets/threePointsOptions.svg";
 import { useNavigate } from "react-router-native";
-// import ModalGuests from './ModalGuests';
-import Agregar from "../../assets/agregar.png"
-import Tres from "../../assets/tres.png"
+import ModalGuests from './ModalGuests';
+import Tres from "../../assets2/tres.png"
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -28,16 +27,16 @@ const InviteBtn = () => {
     <View style={styles.inviteBtn}>
       <Image
         style={styles.inviteBtnImage}
-        source={require("../../assets/profilePictureTemp.png")}
+        source={require("../../assets2/profilePictureTemp.png")}
       />
       <TouchableOpacity style={styles.inviteBtnAdd} onPress={addPeoples}>
-        <Image style={styles.backgroundImage} source={Agregar} />
+        {/* <Add /> */}
       </TouchableOpacity>
       <TouchableOpacity onPress={() => setDisplayGuests(true)}>
         {/* <ThreePointOptions /> */}
         <Image style={styles.backgroundImage1} source={Tres} />
       </TouchableOpacity>
-      {/* <ModalGuests displayGuests={displayGuests} setDisplayGuests={setDisplayGuests} /> */}
+      <ModalGuests displayGuests={displayGuests} setDisplayGuests={setDisplayGuests} />
     </View>
   );
 };
@@ -63,10 +62,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     left: -20,
-  },
-  invite:{
-fontSize:40,
-// color: colors.primaryTomato
   },
   backgroundImage: {
     width: wp(14),

@@ -5,8 +5,6 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import { useSelector } from 'react-redux';
-
-
 const WelcomeUser = () => {
   const { user } = useSelector((state) => state.userState);
   return (
@@ -14,7 +12,7 @@ const WelcomeUser = () => {
       <View style={styles.container}>
         <Text style={styles.text}>Bienvenid@, </Text>
         <Text style={styles.user}>
-          {user.userLogged?.name || user.userRegistered?.name || "Tomas"}
+          {user.userLogged?.name || user.userRegistered?.name || "Usuario"}
         </Text>
       </View>
     </View>
@@ -27,7 +25,7 @@ const styles = StyleSheet.create({
   border: {
     width: wp('100'),
     alignItems: 'center',
-    borderColor: colors.mediumseagreen,
+    borderColor: colors.primaryOrange,
     borderBottomWidth: 1,
   },
   container: {
@@ -36,14 +34,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    color: colors.primaryTomato,
+    color: colors.secundary4,
     fontFamily: fonts.montserrat.medium,
     fontSize: 20,
   },
   user: {
     fontFamily: fonts.montserrat.regular,
     fontSize: 18,
-    color: colors.mediumseagreen,
-
   },
 });

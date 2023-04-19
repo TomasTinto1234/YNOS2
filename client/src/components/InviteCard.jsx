@@ -26,12 +26,13 @@ const InviteCard = ({ id, name, img, guests, setGuests }) => {
                 iconType="material-community"
                 checkedIcon="checkbox-marked"
                 uncheckedIcon="checkbox-blank-outline"
-                checkedColor={colors.mediumseagreen}
+                checkedColor={colors.primaryGreen}
             />
         </View>
     );
 };
 
+export default InviteCard;
 
 const styles = StyleSheet.create({
     contacts: {
@@ -55,4 +56,3 @@ const styles = StyleSheet.create({
         fontFamily: fonts.montserrat.medium,
     }
 })
-    export default InviteCard;

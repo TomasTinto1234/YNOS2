@@ -1,54 +1,52 @@
 import {
-    View,
-    Text,
-    Image,
-    TouchableOpacity,
-    StyleSheet,
-    Alert,
-  } from 'react-native'
-  import {
-    widthPercentageToDP as wp,
-    heightPercentageToDP as hp,
-  } from 'react-native-responsive-screen'
-  import { fonts, colors } from '../utils/theme'
-  // import MoreButton from '../../assets/more-button'
-  // import MinusButton from '../../assets/minus-button'
-  import { useEffect, useState } from 'react'
-  import {
-    addOrder,
-    decreaseOrderQuantity,
-  } from '../redux/slices/order/orderSlice'
-  import { useDispatch, useSelector } from 'react-redux'
-  import Mas from "../../assets/mass.webp"
-  import Menos from "../../assets/menoss.png"
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+} from 'react-native'
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen'
+import { fonts, colors } from '../utils/theme'
+// import MoreButton from '../../assets/more-button'
+// import MinusButton from '../../assets/minus-button'
+import { useEffect, useState } from 'react'
+import {
+  addOrder,
+  decreaseOrderQuantity,
+} from '../redux/slices/order/orderSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import Mas from "../../assets2/mass.webp"
+import Menos from "../../assets2/menoss.png"
 
-  const FoodCard = ({ name, description, image, price, id, quantity }) => {
-    const dispatch = useDispatch()
-  
-    const { preOrder } = useSelector((state) => state.orderState)
-    const { totalPrice } = useSelector((state) => state.orderState)
-  
-    // console.log('tp', totalPrice)
-  
-    const quantityCalculate = (sign) => {
-      if (sign === '-' && quantity !== undefined) {
-        dispatch(decreaseOrderQuantity({ id }))
-      } else {
-        dispatch(
-          addOrder({
-            id,
-            name,
-            description,
-            image,
-            price,
-            quantity: 1,
-          })
-        )
-      }
+const FoodCard = ({ name, description, image, price, id, quantity }) => {
+  const dispatch = useDispatch()
+
+  const { preOrder } = useSelector((state) => state.orderState)
+  const { totalPrice } = useSelector((state) => state.orderState)
+
+  const quantityCalculate = (sign) => {
+    if (sign === '-' && quantity !== undefined) {
+      dispatch(decreaseOrderQuantity({ id }))
+    } else {
+      dispatch(
+        addOrder({
+          id,
+          name,
+          description,
+          image,
+          price,
+          quantity: 1,
+        })
+      )
     }
-  
-    return (
-      <View style={styles.containerFoodCard}>
+  }
+
+  return (
+    <View style={styles.containerFoodCard}>
       <View style={styles.viewImage}>
         <Image
           style={styles.image}
@@ -63,105 +61,104 @@ import {
         </Text>
         <View style={styles.viewOrder}>
           <Text style={styles.priceAndQuantity}>
-            $ {price.toFixed(2) || '0.00'}
+            S/.{price.toFixed(2) || '0.00'}
           </Text>
           <View style={styles.viewSvgs}>
             <TouchableOpacity onPress={() => quantityCalculate('-')}>
               <Image style={styles.backgroundImage1} source={Menos} />
-              </TouchableOpacity>
+            </TouchableOpacity>
             <Text style={styles.priceAndQuantity}>{quantity}</Text>
             <TouchableOpacity onPress={() => quantityCalculate('+')}>
-              <Image style={styles.backgroundImage} source={Mas} />
-              </TouchableOpacity>
-            </View>
+            <Image style={styles.backgroundImage} source={Mas} />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
-    )
-  }
-  
-  export const styles = StyleSheet.create({
-    containerFoodCard: {
-      marginVertical: 4,
-      borderColor: 'lightgray',
-      borderWidth: 2,
-      borderRadius: 12,
-      width: wp(97),
-      minHeight: hp(18),
-      flexDirection: 'row',
-    },
-    viewImage: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: wp(26),
-      height: 135,
-      maxHeight: 135,
-      borderRadius: 8,
-    },
-    image: {
-      borderColor: '#fff',
-      borderWidth: 1,
-      borderRadius: 15,
-      width: 82,
-      height: 82,
-      resizeMode: 'cover',
-    },
-    viewText: {
-      width: wp(74),
-      paddingStart: 10,
-      paddingEnd: 24,
-      marginBottom: 6,
-    },
-    title: {
-      marginVertical: 5,
-      fontSize: 14,
-      fontFamily: fonts.montserrat.bold,
-    },
-    description: {
-      fontSize: 12,
-      fontFamily: fonts.montserrat.medium,
-      color: colors.secundary7,
-    },
-    viewOrder: {
-      paddingEnd: 18,
-      flexDirection: 'row',
-      marginTop: 18,
-      width: wp(68),
-      height: hp(6),
-      justifyContent: 'space-between',
-      alignItems: 'center',
-    },
-    priceAndQuantity: {
-      textAlignVertical: 'center',
-      textAlign: 'center',
-      fontSize: 16,
-      fontFamily: fonts.montserrat.medium,
-      height: hp(6),
-    },
-    svgs: {
-      width: 35,
-      height: 35,
-      marginVertical: 5,
-    },
-    viewSvgs: {
-      flexDirection: 'row',
-      width: wp(30),
-      height: hp(6),
-      textAlign: 'center',
-      justifyContent: 'space-around',
-      alignContent: 'center',
-    },
-    backgroundImage1: {
-      width: wp(7),
-      height: hp(3),
-      marginTop: 8,
-    },
-    backgroundImage: {
-      width: wp(7),
-      height: hp(3),
-      marginTop: 8,
-    },
-  })
-  
-  export default FoodCard
-  
+    </View>
+  )
+}
+
+export const styles = StyleSheet.create({
+  containerFoodCard: {
+    marginVertical: 4,
+    borderColor: 'lightgray',
+    borderWidth: 2,
+    borderRadius: 12,
+    width: wp(97),
+    minHeight: hp(18),
+    flexDirection: 'row',
+  },
+  viewImage: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: wp(26),
+    height: 135,
+    maxHeight: 135,
+    borderRadius: 8,
+  },
+  image: {
+    borderColor: '#fff',
+    borderWidth: 1,
+    borderRadius: 15,
+    width: 82,
+    height: 82,
+    resizeMode: 'cover',
+  },
+  viewText: {
+    width: wp(74),
+    paddingStart: 10,
+    paddingEnd: 24,
+    marginBottom: 6,
+  },
+  title: {
+    marginVertical: 5,
+    fontSize: 14,
+    fontFamily: fonts.montserrat.bold,
+  },
+  description: {
+    fontSize: 12,
+    fontFamily: fonts.montserrat.medium,
+    color: colors.secundary7,
+  },
+  viewOrder: {
+    paddingEnd: 18,
+    flexDirection: 'row',
+    marginTop: 18,
+    width: wp(68),
+    height: hp(6),
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  priceAndQuantity: {
+    textAlignVertical: 'center',
+    textAlign: 'center',
+    fontSize: 16,
+    fontFamily: fonts.montserrat.medium,
+    height: hp(6),
+  },
+  svgs: {
+    width: 35,
+    height: 35,
+    marginVertical: 5,
+  },
+  viewSvgs: {
+    flexDirection: 'row',
+    width: wp(30),
+    height: hp(6),
+    textAlign: 'center',
+    justifyContent: 'space-around',
+    alignContent: 'center',
+  },
+  backgroundImage1: {
+    width: wp(7),
+    height: hp(3),
+    marginTop: 8,
+  },
+  backgroundImage: {
+    width: wp(7),
+    height: hp(3),
+    marginTop: 8,
+  },
+})
+
+export default FoodCard

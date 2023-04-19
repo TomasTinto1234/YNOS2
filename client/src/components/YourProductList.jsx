@@ -75,9 +75,7 @@ const styles = StyleSheet.create({
   },
 
   platesContainer: {
-    paddingTop:5,
-    paddingRight:15,
-    paddingLeft: 20,
+    padding: 10,
   },
 
   text: {

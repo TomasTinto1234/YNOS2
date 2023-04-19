@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Modal, Pressable, Image, Alert } from 'react-native'
+import { StyleSheet, View, Text, Modal, Pressable } from 'react-native'
 import { fonts, colors } from '../utils/theme'
 import {
   widthPercentageToDP as wp,
@@ -6,14 +6,13 @@ import {
 } from 'react-native-responsive-screen'
 // import Confeti from '../../assets/confeti'
 import { useNavigate } from 'react-router-native'
-import Succes from "../../assets/success-38.png"
 
-const ModalPaymentConfirmed = ({ paymentCode, modalVisible, setModalVisible, numeros }) => {
+const ModalPaymentConfirmed = ({ paymentCode, modalVisible, setModalVisible }) => {
 
   const navigation = useNavigate()
   const handleRediret = () => {
     setModalVisible(false)
-    navigation('/')
+    navigation('/menucard/0')
   }
 
   return (
@@ -30,10 +29,9 @@ const ModalPaymentConfirmed = ({ paymentCode, modalVisible, setModalVisible, num
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             {/* <Confeti style={styles.iconModal} /> */}
-            <Image style={styles.backgroundImage1} source={Succes} />
+
             <Text style={styles.modalText}>Pago Confirmado</Text>
-            <Text style={styles.modalText2}>Código de pago:</Text>
-            <Text style={styles.modalText3}>#{numeros}</Text>
+            <Text style={styles.modalText2}>Código de pago: #9876543</Text>
             <View style={styles.buttonModalContainer}>
               <Pressable style={styles.button} onPress={handleRediret}>
                 <Text style={styles.textStyle}>Revisar Comprobante</Text>
@@ -55,9 +53,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.secundary3,
-    elevation: 9,
-    opacity: 0.9,
   },
 
   // modal
@@ -85,7 +80,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     width: wp('60.00%'),
     height: hp('6.00%'),
-    backgroundColor: colors.primaryTomato,
+    backgroundColor: colors.primaryOrange,
   },
 
   buttonModalContainer: {
@@ -115,7 +110,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     textAlign: 'center',
     marginTop: hp('3%'),
-    color: colors.mediumseagreen,
+    color: colors.primaryGreen,
   },
   modalText2: {
     fontSize: 14,
@@ -126,22 +121,11 @@ const styles = StyleSheet.create({
     marginTop: hp('-2%'),
     color: colors.secundary8,
   },
-  modalText3:{
-     fontSize: 18,
-    fontFamily: fonts.montserrat.bold,
-    fontWeight: '300',
-    color: colors.primaryTomato,
-  },
 
   iconModal: {
     width: wp('50.00%'),
     height: hp('20.00%'),
   },
-  backgroundImage1:{
-    width: wp(20),
-    height: hp(10),
-    marginTop:8,
-  }
 })
 
 export default ModalPaymentConfirmed

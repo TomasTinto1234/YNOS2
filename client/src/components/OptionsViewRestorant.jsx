@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import OffersCardButtons from "./OffersCardButtons";
-import OffersYnos from "./OffersYnos";
+import OffersHalf from "./OffersHalf";
 import LetterFilters from "./LetterFilters";
 
 const OptionsViewRestorant = () => {
@@ -14,7 +14,7 @@ const OptionsViewRestorant = () => {
   const [shouldRefresh, setShouldRefresh] = useState(false);
 
   const handleViewOffert = () => {
-    setViewOffer(<OffersYnos />);
+    setViewOffer(<OffersHalf />);
     setViewLetter();
     setStatusBtn("offer");
   };

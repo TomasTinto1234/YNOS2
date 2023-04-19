@@ -1,6 +1,6 @@
 export const colors = {
-    mediumseagreen : '#008b8b', //3cb371  008b8b
-    primaryTomato: '#008b8b', 
+  primaryGreen : '#008b8b', //3cb371  008b8b
+  primaryOrange: '#F2C94C', 
     secundary1: '#00000005', // gris medio
     secundary2: '#313232', // gris oscuro
     secundary3: '#E0E0E0', // gris claro

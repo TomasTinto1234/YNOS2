@@ -1,26 +1,26 @@
-import { View, StyleSheet, SafeAreaView, ScrollView } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 import OptionsViewRestorant from "../components/OptionsViewRestorant";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import ViewOrderButton from "../components/ViewOrderButton";
 import BackgroundCard from "../components/BackgroundCard";
 import BigButtonOrder from "../components/BigButtonOrder";
-import TitlePage from "../components/TitlePage";
+
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-native";
-import MiniatureRestaurant from "../components/MiniatureRestaurant"
 
- const MenuCardScreen = () => {
+export const MenuCardScreen = () => {
   const { id } = useParams();
   const { restaurants } = useSelector((state) => state.restaurantState);
-  const logo = restaurants[id].image;
+  const logo = restaurants[0].image;
   return (
     <SafeAreaView style={styles.container}>
       <BackgroundCard logo={logo} />
       <OptionsViewRestorant />
       <View style={styles.btn}>
-        <BigButtonOrder route='/order' order/>
+        <BigButtonOrder route='/order' />
       </View>
     </SafeAreaView>
   );
@@ -33,13 +33,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btn: {
-    position: "absolute",
-    bottom: hp(5),
-  },
-  scroll: {
-    gap: 25,
-    alignItems: 'center'
+    width:wp(100),
+    height:hp(10.1),
+    justifyContent:'center',
+    paddingBottom:hp(2),
+    alignItems:'center',
   },
 });
-
-export default MenuCardScreen

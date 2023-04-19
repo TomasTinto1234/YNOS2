@@ -15,28 +15,28 @@ const MiniatureRestaurant = () => {
   const data = [
     {
       name: "Sturbucks",
-      uri: require("../../assets/sturbucks.jpeg"),
+      uri: require("../../assets2/sturbucks.jpeg"),
       description: "CAFETERIA, POSTRES, MEDIALUNAS",
     },
     {
       name: "mostaza",
-      uri: require("../../assets/mostaza1.png"),
+      uri: require("../../assets2/mostaza1.png"),
       description: "RESTAURANTE DE COMIDA RAPIDA",
     },
     {
       name: "Pumper Nic",
-      uri: require("../../assets/descarga3.png"),
+      uri: require("../../assets2/descarga3.png"),
       description:
         "PAPACHOS PROVOCA A DIARIO, CON CARIÑO, ARTESANALMENTE Y CON LOS INSUMOS MÁS FRESCOS. ",
     },
     {
       name: "Mc Donals",
-      uri: require("../../assets/descarga(2).jpeg"),
+      uri: require("../../assets2/descarga(2).jpeg"),
       description: "RESTAURANTE DE COMIDA RAPIDA",
     },
     {
       name: "Burger King",
-      uri: require("../../assets/descarga.png"),
+      uri: require("../../assets2/descarga.png"),
       description:
         "PAPACHOS PROVOCA A DIARIO, CON CARIÑO, ARTESANALMENTE Y CON LOS INSUMOS MÁS FRESCOS. ",
     },

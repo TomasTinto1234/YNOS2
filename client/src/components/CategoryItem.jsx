@@ -25,12 +25,12 @@ const styles = StyleSheet.create({
 
   },
   greenText: {
-    color: colors.secundary5,
-    fontFamily: fonts.montserrat.medium,
+    color: colors.primaryGreen,
+    fontFamily: fonts.montserrat.bold,
   },
   orangeText: {
-    color: colors.mediumseagreen,
-    fontFamily: fonts.montserrat.medium,
+    color: colors.primaryOrange,
+    fontFamily: fonts.montserrat.bold,
 
   },
   img: {

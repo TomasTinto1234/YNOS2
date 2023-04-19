@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { colors, fonts } from '../utils/theme';
+import { fonts, colors } from '../utils/theme';
+import Mapa from "../../assets2/mapa.webp"
+import Promociones from "../../assets2/promociones.png"
+import SpecialPromo from "../../assets2/specialPromo.png"
 
 const NearMe = () => {
   const [pressedNearMe, setPressedNearMe] = useState(false);
@@ -31,7 +34,7 @@ const NearMe = () => {
   };
 
   const buttonStyleNearme = {
-    backgroundColor: pressedNearMe ? colors.mediumseagreen : '#fff',
+    backgroundColor: pressedNearMe ? '#F2C94C' : '#fff',
     paddingVertical: 6,
     paddingHorizontal: 5,
     borderRadius: 5,
@@ -43,19 +46,11 @@ const NearMe = () => {
     shadowOffset: { width: 0.5, height: 2 },
     flexDirection: "row",
     width: 110,
-    gap: 5,
-    borderBottomWidth: 1,
-    borderRightWidth:1,
-    borderLeftWidth:1,
-    borderTopWidth:1,
-    borderBottomColor: colors.secundary8,
-    borderTopColor: colors.secundary8,
-    borderRightColor: colors.secundary8,
-    borderLeftColor: colors.secundary8,
+    gap: 5
   };
 
   const buttonStylePromociones = {
-    backgroundColor: pressedPromo ? colors.mediumseagreen : '#fff',
+    backgroundColor: pressedPromo ? '#F2C94C' : '#fff',
     paddingVertical: 6,
     paddingHorizontal: 5,
     borderRadius: 5,
@@ -67,19 +62,11 @@ const NearMe = () => {
     shadowOffset: { width: 0.5, height: 2 },
     flexDirection: "row",
     width: 110,
-    gap: 5,
-    borderBottomWidth: 1,
-    borderRightWidth:1,
-    borderLeftWidth:1,
-    borderTopWidth:1,
-    borderBottomColor: colors.secundary8,
-    borderTopColor: colors.secundary8,
-    borderRightColor: colors.secundary8,
-    borderLeftColor: colors.secundary8,
+    gap: 5
   };
 
   const buttonStylePopulares = {
-    backgroundColor: pressedPopular ? colors.mediumseagreen : '#fff',
+    backgroundColor: pressedPopular ? '#F2C94C' : '#fff',
     paddingVertical: 6,
     paddingHorizontal: 5,
     borderRadius: 5,
@@ -91,28 +78,20 @@ const NearMe = () => {
     shadowOffset: { width: 0.5, height: 2 },
     flexDirection: "row",
     width: 110,
-    gap: 5,
-     borderBottomWidth: 1,
-    borderRightWidth:1,
-    borderLeftWidth:1,
-    borderTopWidth:1,
-    borderBottomColor: colors.secundary8,
-    borderTopColor: colors.secundary8,
-    borderRightColor: colors.secundary8,
-    borderLeftColor: colors.secundary8,
+    gap: 5
   };
 
   return (
     <View style={styles.conteiners}>
       <View>
         <TouchableOpacity
-          style={buttonStylePopulares}
-          color={pressedPopular}
-          onPress={handlePressPopu}
+          style={buttonStylePromociones}
+          color={pressedPromo}
+          onPress={handlePressPromo}
           onPressOut={handleRelease}
         >
-          {/* <Populars /> */}
-          <Text style={styles.text}>Populares</Text>
+           <Image style={styles.backgroundImage1} source={SpecialPromo} />
+          <Text style={styles.text}>Promos</Text>
         </TouchableOpacity>
       </View>
       <View >
@@ -122,19 +101,19 @@ const NearMe = () => {
           onPress={handlePressNearMe}
           onPressOut={handleRelease}
         >
-          {/* <Map /> */}
+          <Image style={styles.backgroundImage} source={Mapa} />
           <Text style={styles.text}>Cerca a mí</Text>
         </TouchableOpacity>
       </View>
       <View>
         <TouchableOpacity
-          style={buttonStylePromociones}
-          color={pressedPromo}
-          onPress={handlePressPromo}
+          style={buttonStylePopulares}
+          color={pressedPopular}
+          onPress={handlePressPopu}
           onPressOut={handleRelease}
         >
-          {/* <Promo /> */}
-          <Text style={styles.text}>Promociones</Text>
+          <Image style={styles.backgroundImage2} source={Promociones} />
+          <Text style={styles.text}>Populares</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -154,7 +133,21 @@ const styles = StyleSheet.create({
     fontFamily: fonts.montserrat.regular,
     width: "auto",
     alignItems: "center",
-    color: colors.secundary5,
+  },
+  backgroundImage:{
+    width: wp(9),
+    height: hp(3),
+    // backgroundColor: "#fff",
+  },
+  backgroundImage2:{
+    width: wp(6),
+    height: hp(3),
+    // backgroundColor: "#fff",
+  },
+  backgroundImage1:{
+    width: wp(13),
+    height: hp(3),
+    // backgroundColor: "#fff",
   },
 });
 

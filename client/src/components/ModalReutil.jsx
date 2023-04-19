@@ -1,13 +1,13 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
-import Ok from '../../assets/success-38.png'
+// import Ok from '../../assets/ok.svg'
 import {colors, fonts} from '../utils/theme'
 
 const ModalReutil = ({textPrimary, asset}) => {
   return (
       <View style={styles.content}>
-        {asset === 'ok' ? <Ok style={styles.contentAsset}/> : ''}
+        {/* {asset === 'ok' ? <Ok style={styles.contentAsset}/> : ''} */}
         <Text style={styles.contentText}>{textPrimary}</Text>
       </View>
   )
