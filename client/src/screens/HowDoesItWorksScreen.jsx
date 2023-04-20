@@ -19,7 +19,7 @@ import ContinueButton from '../components/ContinueButton'
 // import GreenBottomThinEllipse from '../../assets/green-bottom-thin-ellipse.svg'
 
 // Utils
-import { fonts } from '../utils/theme'
+import { colors, fonts } from '../utils/theme'
 
 export const HowDoesItWorksScreen = () => {
   return (
@@ -66,8 +66,6 @@ export const HowDoesItWorksScreen = () => {
         <View style={styles.continueButton}>
           <ContinueButton to={'/login'} />
         </View>
-        {/* <GreenBottomThinEllipse style={styles.greenBottomThinEllipse} />
-        <GreenBottomEllipse style={styles.greenBottomEllipse} /> */}
       </View>
     </View>
   )
@@ -108,6 +106,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     textAlign: 'center',
+    color:colors.primaryOrange
   },
   itemContainer: {
     flexDirection: 'row',
@@ -118,10 +117,12 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: 'center',
     letterSpacing: -0.6,
+    color:colors.primaryOrange
   },
   textEncuentra: {
     marginLeft: 15,
     marginTop: 25,
+    color:colors.primaryGreen
   },
   textRealiza: {
     marginLeft: 38,
@@ -131,6 +132,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginTop: 10,
     lineHeight: 30,
+    color:colors.primaryGreen
   },
   textDivide: {
     marginLeft: 15,
@@ -140,6 +142,7 @@ const styles = StyleSheet.create({
     marginLeft: wp('2.00%'),
     marginTop: 14,
     lineHeight: 30,
+    color:colors.primaryGreen
   },
   placeMap: {
     width: wp('20.00%'),

@@ -31,7 +31,7 @@ const BigButtonOrder = ({ route }) => {
       {/* <ShoppingBag style={styles.bag} /> */}
       <Image style={styles.backgroundImage} source={Caja} />
       <Text style={styles.text}>Ordenar</Text>
-      <Text style={styles.text}>{`S/.${totalPrice.toFixed(2)}`}</Text>
+      <Text style={styles.text}>{`$ ${totalPrice.toFixed(2)}`}</Text>
     </TouchableOpacity>
   )
 }

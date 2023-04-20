@@ -55,7 +55,7 @@ const MembersOrdersCard = ({
       <View style={stylesMembers.viewDatas}>
         <Text style={stylesMembers.name}>{userName || 'Sin nombre'}</Text>
         <Text style={stylesMembers.food}>{foodName || 'Sin nombre'}</Text>
-        <Text style={stylesMembers.price}>S/.{foodPrice || 'Sin precio'}</Text>
+        <Text style={stylesMembers.price}>$ {foodPrice || 'Sin precio'}</Text>
       </View>
       <View style={stylesMembers.viewCheckBox}>
         <CheckBox

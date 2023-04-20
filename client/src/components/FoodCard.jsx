@@ -61,7 +61,7 @@ const FoodCard = ({ name, description, image, price, id, quantity }) => {
         </Text>
         <View style={styles.viewOrder}>
           <Text style={styles.priceAndQuantity}>
-            S/.{price.toFixed(2) || '0.00'}
+            $ {price.toFixed(2) || '0.00'}
           </Text>
           <View style={styles.viewSvgs}>
             <TouchableOpacity onPress={() => quantityCalculate('-')}>
