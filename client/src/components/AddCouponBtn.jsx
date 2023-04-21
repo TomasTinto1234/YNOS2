@@ -1,4 +1,4 @@
-import { TouchableOpacity, Text, StyleSheet, View } from 'react-native'
+import { TouchableOpacity, Text, StyleSheet, View, Image } from 'react-native'
 import React from 'react'
 // import IconAdd from '../../assets/icon-add-cupon.svg'
 import { colors, fonts } from '../utils/theme'
@@ -18,7 +18,6 @@ const AddCouponBtn = () => {
         style={styles.addCuponContent}
         onPress={viewCouponScreen}
       >
-        {/* <IconAdd style={styles.addCuponImage} /> */}
         <Text style={styles.addCuponText}>Agregar Cupón</Text>
       </TouchableOpacity>
     </View>

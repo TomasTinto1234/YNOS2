@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View, Modal, Alert } from 'react-native'
+import { StyleSheet, Text, View, Modal, Alert, Image } from 'react-native'
 import React, { useEffect } from 'react'
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
 import { fonts } from '../utils/theme'
-// import SendInviteIcon from '../../assets/send-invite-icon.svg'
+import Wpp from '../../assets2/whatsapp.png'
 
 const SendInviteModal = ({ modalVisible, setModalVisible }) => {
   // useEffect para que luego de tocar "Enviar Invitacion" el modal se cierre despues de los 2.5 segs
@@ -31,7 +31,7 @@ const SendInviteModal = ({ modalVisible, setModalVisible }) => {
     >
       <View style={styles.container}>
         <View style={styles.modalView}>
-          {/* <SendInviteIcon style={styles.modalIcon} /> */}
+          <Image style={styles.backgroundImage} source={Wpp} />
           <Text style={styles.modalText}>
             Hemos enviado tu{'\n'} invitación
           </Text>
@@ -81,5 +81,13 @@ const styles = StyleSheet.create({
   modalIcon: {
     width: wp('36.00%'),
     height: hp('30.00%'),
+  },
+  backgroundImage: {
+    width: wp(25),
+    height: hp(13),
+    marginTop:10,
+    // resizeMode: 'cover',
+    // opacity: 0.56,
+    backgroundColor: "#fff",
   },
 })
