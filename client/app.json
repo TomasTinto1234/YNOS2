@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "YNOS",
-    "slug": "ynos",
+    "slug": "ynos1",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets2/DALL·E.png",
@@ -29,7 +29,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "0f51fa4c-54b8-47eb-a5a5-c1b926685dcc"
+        "projectId": "3340f6e1-9103-442f-867e-40c757d06ae8"
       }
     },
     "owner": "tomastinto"
